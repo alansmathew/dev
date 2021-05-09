@@ -119,6 +119,19 @@
         letter-spacing: 1.2px;
         color: rgba(0, 0, 0, 0.657);
       }
+      .shake{
+        display: inline-block;
+        animation: shakeit 10.5s infinite ease-in-out;  
+      }
+      @keyframes shakeit{
+        0% { transform: rotate(0deg); }
+        8% { transform:rotate(-30deg); }
+        14% { transform: rotate(7deg); }
+        20% { transform:rotate(-23deg); }
+        24% { transform: rotate(2deg); }
+        27% { transform:rotate(-7deg); }
+        28.5% { transform: rotate(0deg); }
+      }
       h1 {
         text-align: justify;
         font-family: "Sniglet", cursive;
@@ -186,7 +199,7 @@
       <div class="blockcontainer">
         <div class="centerbox">
           <div class="content" style="width: 600px">
-            <h3>Hey ! i'm Alan S Mathew &nbsp;👋</h3>
+            <h3>Hey ! i'm Alan S Mathew &nbsp; <div class="shake">👋 </div></h3>
             <h1>
               I'm a developer, creative thinker <BR> & self-motivated person ->
               <div style="color: rgb(114, 94, 245); display: inline;">likes to solve problems and help others...</p>
