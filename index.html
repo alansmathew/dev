@@ -30,12 +30,14 @@
       }
       /* animation starts  */
       .animationccontainer {
+        opacity: 1;
         width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         background: white;
+        transition: all .5s ease-in ;
       }
 
       .animationccontainer .container {
@@ -68,32 +70,31 @@
         width: 6px;
         height: 0%;
         background: rgb(255, 152, 17);
-        z-index: 999999;
       }
 
       .loadftwo {
         right: 0;
-        animation: load2 0.4s linear 2s forwards;
+        animation: load2 0.4s linear forwards;
       }
       .loadthree {
         right: 0;
-        animation: load3 0.3s linear 2.4s forwards;
+        animation: load3 0.3s linear 0.4s forwards;
       }
       .loadfour {
         right: 0;
-        animation: load4 0.2s linear 2.7s forwards;
+        animation: load4 0.2s linear 0.7s forwards;
       }
       .loadfive {
         left: 0;
-        animation: load5 0.2s linear 2.9s forwards;
+        animation: load5 0.2s linear 0.9s forwards;
       }
       .loadsix {
         left: 0;
-        animation: load6 0.25s linear 3.1s forwards;
+        animation: load6 0.25s linear 1.1s forwards;
       }
       .loadone {
         left: 0;
-        animation: load1 0.4s linear 3.35s forwards;
+        animation: load1 0.4s linear 1.35s forwards;
       }
       .animat {
         font-family: sans-serif;
@@ -103,7 +104,7 @@
         letter-spacing: 3px;
         color: rgb(80, 68, 52);
         opacity: 0;
-        animation: showlogo 0.5s ease-in-out 3.85s forwards;
+        animation: showlogo 0.5s ease-in-out 1.85s forwards;
       }
 
       @keyframes load1 {
@@ -186,11 +187,13 @@
           background-color: rgba(255, 207, 103, 0.781);
       }
       .bttomleftContainer {
-        display:none;
+        opacity:0;
+        /* display:none; */
         position: fixed;
         bottom: 0px;
         left: 60px;
         z-index: 1;
+        transition: all .4s ease-in-out;
       }
       .bttomleftContainer .con {
         width: 40px;
@@ -207,12 +210,14 @@
         height: 37px;
       }
       .bttomrightContainer {
-        display: none;
+        opacity:0;
+        /* display: none; */
         position: fixed;
         width:24px;
         bottom: 0px;
         right: 60px;
         z-index: 1;
+        transition: all .4s ease-in-out;
       }
       .bttomrightContainer a {
         writing-mode: vertical-rl;
@@ -233,11 +238,13 @@
         background-color: black;
       }
       .bodycontainer {
-        display: none;
+        opacity:0;
+        /* display: none; */
         position: relative;
         left: 50%;
         transform: translate(-50%);
         width: 95vw;
+        transition: all .4s ease-in-out;
         /* height: 200vh; */
         /* background-color: greenyellow; */
       }
@@ -393,10 +400,12 @@
       }
 
       .footer{
-        display: none;
+        opacity:0;
+        /* display: none; */
         width:100%;
         height: auto;
         position: relative;
+        transition: all .4s ease-in-out;
       }
       .footer svg{
         position: relative;
@@ -546,18 +555,31 @@
     </style>
 
     <script>
-      // document.getElementById("bdycont").style.display="none";
-      // document.getElementById("btmleft").style.cssText = "display:none";
-      // document.getElementById("btmright").style.cssText = "display:none";
-      // document.getElementById("ftr").style.cssText = "display:none";
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
 
-      window.addEventListener('load', function() {
-			    document.getElementById("ani").style.cssText = "display:none";
+      window.addEventListener('load', async function() {
+          document.getElementById("bdycont").style.cssText = "display:none";
+          document.getElementById("btmleft").style.cssText = "display:none";
+          document.getElementById("btmright").style.cssText = "display:none";
+          document.getElementById("ftr").style.cssText = "display:none";
 
+          await sleep(3000); // 4seconds sleep
+			    document.getElementById("ani").style.cssText = "opacity: 0;";
           document.getElementById("bdycont").style.cssText = "display:block";
           document.getElementById("btmleft").style.cssText = "display:block";
           document.getElementById("btmright").style.cssText = "display:block";
           document.getElementById("ftr").style.cssText = "display:block";
+
+          await sleep(600) // .5 seconds sleep
+          document.getElementById("ani").style.cssText = "display: none;";
+
+          document.getElementById("bdycont").style.cssText = "opacity: 1";
+          await sleep(700)
+          document.getElementById("btmleft").style.cssText = "opacity: 1";
+          document.getElementById("btmright").style.cssText = "opacity: 1";
+          document.getElementById("ftr").style.cssText = "opacity: 1";
 		  });
 
       var jsdata
