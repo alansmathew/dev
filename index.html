@@ -175,16 +175,23 @@
         height: auto;
         position: relative;
       }
+      .footer svg{
+        position: relative;
+        bottom: -15px;
+      }
       .footer .footerunderground{
         position: relative;
-        top:-4px;
-        height: 70px;
+        height: 100px;
         width: 100%;
-        background-color: #f0f1ffa9;
+        background-color: #F0F1FF;
         font-family: 'Varela Round', sans-serif;
         font-size: 13px;
         color: rgba(0, 0, 0, 0.712);
       }
+      .footercon{
+        display: none;
+      }
+      
 
       @media (max-width:1000px){
 
@@ -245,17 +252,26 @@
           text-align: justify;
         }
         .footer .footerunderground{
-        position: relative;
-        top:-4px;
-        height: 70px;
-        width: 100%;
-        background-color: #f0f1ffa9;
-        font-family: 'Varela Round', sans-serif;
-        font-size: 9px;
-        color: rgba(0, 0, 0, 0.712);
-      }
-
-        
+          font-size: 9px;
+        }
+        .footercon{
+          width:15px;
+          height:17px;
+          display: inline-block;
+          margin:8px 8px;
+        }
+        .footercon img{
+          width:15px;
+          height:15px;
+        }
+        .footerunderground a{
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.712);
+          /* font-size: 7px; */
+        }
+        .footerunderground div{
+          margin: 5px;
+        }
         
       }
     </style>
@@ -275,7 +291,7 @@
       //   }
     </script>
   </head>
-  <body onload="onmypagelode()">
+  <body >
     <div class="bodycontainer">
 
       <div class="blockcontainer">
@@ -383,11 +399,36 @@
     </div>
 
     <div class="footer">
-      <svg width="100%" height="180" viewBox="0 0 1440 120" fill="#F0F1FF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" class="footer__wave">
-        <path d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#f0f1ffa9"></path>
+      <svg width="100%" height="180" viewBox="0 0 1440 120" fill="#F0F1FF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" >
+        <path d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#F0F1FF"></path>
       </svg>
       <div class="footerunderground">
-          <center><div>Designed & build by Alan S Mathew</center>
+          <center>
+            <div class="footercon">
+              <a href="https://github.com/alansmathew" target="_blank"
+                ><img
+                  src="https://img.icons8.com/fluent-systems-filled/54/000000/github.png"
+              /></a>
+            </div>
+            <div class="footercon">
+              <a href="https://www.instagram.com/alan_s_mathew" target="_blank"
+                ><img
+                  src="https://img.icons8.com/small/64/000000/instagram-new.png"
+              /></a>
+            </div>
+            <div class="footercon">
+              <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"
+                ><img src="https://img.icons8.com/ios/90/000000/linkedin-2--v1.png"
+              /></a>
+            </div>
+            <div class="footercon">
+              <a href="https://twitter.com/AlanSMathew008" target="_blank"
+                ><img src="https://img.icons8.com/ios/96/000000/twitter--v1.png"
+              /></a>
+            </div> <br>
+            <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a><br>
+            <div>Designed & build by Alan S Mathew</div>
+          </center>
       </div>
     </div>
 
