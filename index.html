@@ -191,6 +191,9 @@
       .footercon{
         display: none;
       }
+      .footerunderground a{
+        display:none;
+      }
       
 
       @media (max-width:1000px){
@@ -255,22 +258,25 @@
           font-size: 9px;
         }
         .footercon{
+          display: block;
           width:15px;
-          height:17px;
+          height:15px;
+          /* float: left; */
           display: inline-block;
-          margin:8px 8px;
+          margin:8px 6px;
         }
         .footercon img{
           width:15px;
           height:15px;
         }
         .footerunderground a{
+          display: block;
           text-decoration: none;
           color: rgba(0, 0, 0, 0.712);
           /* font-size: 7px; */
         }
-        .footerunderground div{
-          margin: 5px;
+        .design{
+          margin-top: -5px;
         }
         
       }
@@ -427,7 +433,7 @@
               /></a>
             </div> <br>
             <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a><br>
-            <div>Designed & build by Alan S Mathew</div>
+            <div class="design">Designed & build by Alan S Mathew</div>
           </center>
       </div>
     </div>
