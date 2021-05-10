@@ -28,6 +28,157 @@
         margin: 0px;
         scroll-behavior: smooth;
       }
+      /* animation starts  */
+      .animationccontainer {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+
+      .animationccontainer .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .animationccontainer div {
+        position: absolute;
+        width: 120px;
+        height: 68px;
+      }
+
+      .animationccontainer div:nth-of-type(2) {
+        transform: rotate(60deg);
+      }
+      .animationccontainer div:nth-of-type(3) {
+        transform: rotate(-60deg);
+      }
+
+      .animationccontainer div div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .animationccontainer div div span {
+        position: absolute;
+        width: 6px;
+        height: 0%;
+        background: rgb(255, 152, 17);
+        z-index: 999999;
+      }
+
+      .loadftwo {
+        right: 0;
+        animation: load2 0.4s linear 2s forwards;
+      }
+      .loadthree {
+        right: 0;
+        animation: load3 0.3s linear 2.4s forwards;
+      }
+      .loadfour {
+        right: 0;
+        animation: load4 0.2s linear 2.7s forwards;
+      }
+      .loadfive {
+        left: 0;
+        animation: load5 0.2s linear 2.9s forwards;
+      }
+      .loadsix {
+        left: 0;
+        animation: load6 0.25s linear 3.1s forwards;
+      }
+      .loadone {
+        left: 0;
+        animation: load1 0.4s linear 3.35s forwards;
+      }
+      .animat {
+        font-family: sans-serif;
+        font-size: 1.6em;
+        color: balck;
+        font-weight: 900;
+        letter-spacing: 3px;
+        color: rgb(80, 68, 52);
+        opacity: 0;
+        animation: showlogo 0.5s ease-in-out 3.85s forwards;
+      }
+
+      @keyframes load1 {
+        0% {
+          bottom: 0;
+          height: 0;
+        }
+        100% {
+          bottom: 0;
+          height: 100%;
+        }
+      }
+
+      @keyframes load2 {
+        0% {
+          top: 0;
+          height: 0;
+        }
+        100% {
+          top: 0;
+          height: 100%;
+        }
+      }
+
+      @keyframes load3 {
+        0% {
+          top: 0;
+          height: 0;
+        }
+        100% {
+          top: 0;
+          height: 100%;
+        }
+      }
+
+      @keyframes load4 {
+        0% {
+          top: 0;
+          height: 0;
+        }
+        100% {
+          top: 0;
+          height: 100%;
+        }
+      }
+
+      @keyframes load5 {
+        0% {
+          bottom: 0;
+          height: 0;
+        }
+        100% {
+          bottom: 0;
+          height: 100%;
+        }
+      }
+
+      @keyframes load6 {
+        0% {
+          bottom: 0;
+          height: 0;
+        }
+        100% {
+          bottom: 0;
+          height: 100%;
+        }
+      }
+      @keyframes showlogo {
+        to {
+          opacity: 1;
+          font-size: 1.8em;
+        }
+      }
+      /* animation ends here  */
+
       a:focus{
         outline: none;
       }
@@ -35,6 +186,7 @@
           background-color: rgba(255, 207, 103, 0.781);
       }
       .bttomleftContainer {
+        display:none;
         position: fixed;
         bottom: 0px;
         left: 60px;
@@ -55,6 +207,7 @@
         height: 37px;
       }
       .bttomrightContainer {
+        display: none;
         position: fixed;
         width:24px;
         bottom: 0px;
@@ -80,6 +233,7 @@
         background-color: black;
       }
       .bodycontainer {
+        display: none;
         position: relative;
         left: 50%;
         transform: translate(-50%);
@@ -239,6 +393,7 @@
       }
 
       .footer{
+        display: none;
         width:100%;
         height: auto;
         position: relative;
@@ -391,7 +546,22 @@
     </style>
 
     <script>
+      // document.getElementById("bdycont").style.display="none";
+      // document.getElementById("btmleft").style.cssText = "display:none";
+      // document.getElementById("btmright").style.cssText = "display:none";
+      // document.getElementById("ftr").style.cssText = "display:none";
+
+      window.addEventListener('load', function() {
+			    document.getElementById("ani").style.cssText = "display:none";
+
+          document.getElementById("bdycont").style.cssText = "display:block";
+          document.getElementById("btmleft").style.cssText = "display:block";
+          document.getElementById("btmright").style.cssText = "display:block";
+          document.getElementById("ftr").style.cssText = "display:block";
+		  });
+
       var jsdata
+
         function loadDoc() {
           var pageToVisit = "https://api.github.com/users/alansmathew/repos";
           var xhttp = new XMLHttpRequest();
@@ -421,22 +591,45 @@
                   htmlToAppend+='<a href="'+htmlUrl+'" target="_blank"> <div class="boxess"> <img src="https://img.icons8.com/pastel-glyph/128/000000/folder-invoices--v2.png"/> <h2><strong>'+nameOfRepo+'</strong></h2><p>'+desc+'</p><h6>'+lang+'</h6></div></a>';
 
                 }
-
                 document.getElementsByClassName("centeringBoxes")[0].innerHTML=htmlToAppend;
-
-                // console.log(data)
-              // document.getElementById("demo").innerHTML = this.responseText;
             }
           };
           xhttp.open("GET", pageToVisit, true);
           xhttp.send();
-          
         }
+
     </script>
   </head>
   <body onload="loadDoc()">
-  <!-- <body> -->
-    <div class="bodycontainer">
+
+  <!-- animation --------------------------------------- -->
+    <div class="animationccontainer" id="ani">
+      <section class="container">
+        <div>
+          <div>
+            <span class="one loadsix"></span>
+            <span class="two loadthree"></span>
+          </div>
+        </div>
+        <p class="animat">ASM</p>
+        <div>
+          <div>
+            <span class="one loadone"></span>
+            <span class="two loadfour"></span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span class="one loadfive"></span>
+            <span class="two loadftwo"></span>
+          </div>
+        </div>
+      </section>
+    </div>
+  <!-- animation ends here  -->
+
+    <!-- body stats here  -->
+    <div class="bodycontainer" id="bdycont">
 
       <div class="blockcontainer">
         <div class="centerbox">
@@ -525,11 +718,9 @@
       </div>
 
     </div>
-
     <!-- body ends here  -->
 
-
-    <div class="bttomleftContainer">
+    <div class="bttomleftContainer" id="btmleft">
       <center>
         <div class="con">
           <a href="https://github.com/alansmathew" target="_blank"
@@ -557,14 +748,14 @@
       </center>
     </div>
 
-    <div class="bttomrightContainer">
+    <div class="bttomrightContainer" id="btmright">
       <center>
         <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a>
         <div class="line"></div>
       </center>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="ftr">
       <svg width="100%" height="180" viewBox="0 0 1440 120" fill="#F0F1FF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" >
         <path d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#F0F1FF"></path>
       </svg>

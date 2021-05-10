@@ -6,74 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation</title>
     <style>
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 100%;
+      .animationccontainer {
+        width: 100vw;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background:white;
+        background: white;
       }
 
-      .container {
+      .animationccontainer .container {
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      div {
+      .animationccontainer div {
         position: absolute;
         width: 120px;
         height: 68px;
       }
 
-      div:nth-of-type(2) {
+      .animationccontainer div:nth-of-type(2) {
         transform: rotate(60deg);
       }
-      div:nth-of-type(3) {
+      .animationccontainer div:nth-of-type(3) {
         transform: rotate(-60deg);
       }
 
-      div div {
+      .animationccontainer div div {
         width: 100%;
         height: 100%;
         position: relative;
       }
 
-      div div span {
+      .animationccontainer div div span {
         position: absolute;
         width: 6px;
         height: 0%;
-        background:rgb(255, 152, 17);
+        background: rgb(255, 152, 17);
         z-index: 999999;
       }
 
-      .loadone {
-        left: 0;
-        animation: load1 7.2s ease infinite;
-      }
       .loadftwo {
         right: 0;
-        animation: load2 7.2s ease 0.6s infinite;
+        animation: load2 0.4s linear 2s forwards;
       }
       .loadthree {
         right: 0;
-        animation: load3 7.2s ease 1.2s infinite;
+        animation: load3 0.3s linear 2.4s forwards;
       }
       .loadfour {
         right: 0;
-        animation: load4 7.2s ease 1.8s infinite;
+        animation: load4 0.2s linear 2.7s forwards;
       }
       .loadfive {
         left: 0;
-        animation: load5 7.2s ease 2.4s infinite;
+        animation: load5 0.2s linear 2.9s forwards;
       }
       .loadsix {
         left: 0;
-        animation: load6 7.2s ease 3s infinite;
+        animation: load6 0.25s linear 3.1s forwards;
+      }
+      .loadone {
+        left: 0;
+        animation: load1 0.4s linear 3.35s forwards;
+      }
+      .animat {
+        font-family: sans-serif;
+        font-size: 1.6em;
+        color: balck;
+        font-weight: 900;
+        letter-spacing: 3px;
+        color: rgb(80, 68, 52);
+        opacity: 0;
+        animation: showlogo 0.5s ease-in-out 3.85s forwards;
       }
 
       @keyframes load1 {
@@ -81,19 +88,10 @@
           bottom: 0;
           height: 0;
         }
-        6.944444444% {
+        100% {
           bottom: 0;
           height: 100%;
         }
-        50% {
-          top: 0;
-          height: 100%;
-        }
-        59.944444433% {
-          top: 0;
-          height: 0;
-        }
-        /*   91.6666667%{top:0;height:0%;} */
       }
 
       @keyframes load2 {
@@ -101,19 +99,10 @@
           top: 0;
           height: 0;
         }
-        6.944444444% {
+        100% {
           top: 0;
           height: 100%;
         }
-        50% {
-          bottom: 0;
-          height: 100%;
-        }
-        59.944444433% {
-          bottom: 0;
-          height: 0;
-        }
-        /*   91.6666667%{bottom:0;height:0%} */
       }
 
       @keyframes load3 {
@@ -121,19 +110,10 @@
           top: 0;
           height: 0;
         }
-        6.944444444% {
+        100% {
           top: 0;
           height: 100%;
         }
-        50% {
-          bottom: 0;
-          height: 100%;
-        }
-        59.94444443% {
-          bottom: 0;
-          height: 0;
-        }
-        /*   91.6666667%{bottom:0;height:0%;} */
       }
 
       @keyframes load4 {
@@ -141,19 +121,10 @@
           top: 0;
           height: 0;
         }
-        6.944444444% {
+        100% {
           top: 0;
           height: 100%;
         }
-        50% {
-          bottom: 0;
-          height: 100%;
-        }
-        59.94444443% {
-          bottom: 0;
-          height: 0;
-        }
-        /*   91.6666667%{bottom:0;height:0%;} */
       }
 
       @keyframes load5 {
@@ -161,19 +132,10 @@
           bottom: 0;
           height: 0;
         }
-        6.944444444% {
+        100% {
           bottom: 0;
           height: 100%;
         }
-        50% {
-          top: 0;
-          height: 100%;
-        }
-        59.94444443% {
-          top: 0;
-          height: 0;
-        }
-        /*   91.6666667%{top:0;height:0%;} */
       }
 
       @keyframes load6 {
@@ -181,49 +143,42 @@
           bottom: 0;
           height: 0;
         }
-        6.944444444% {
+        100% {
           bottom: 0;
           height: 100%;
         }
-        50% {
-          top: 0;
-          height: 100%;
-        }
-        59.94444443% {
-          top: 0;
-          height: 0;
-        }
-        /*   91.6666667%{top:0;height:0%;} */
       }
-      .animat{
-          font-family: sans-serif;
-          font-size: 2em;
-          color: balck;
+      @keyframes showlogo {
+        to {
+          opacity: 1;
+          font-size: 1.8em;
+        }
       }
     </style>
   </head>
   <body>
-    <section class="container">
+    <div class="animationccontainer">
+      <section class="container">
         <div>
-        <div>
-          <span class="one loadsix"></span>
-          <span class="two loadthree"></span>
+          <div>
+            <span class="one loadsix"></span>
+            <span class="two loadthree"></span>
+          </div>
         </div>
-      </div>
-      <p class="animat">ASM</p>
-      <div>
+        <p class="animat">ASM</p>
         <div>
-          <span class="one loadone"></span>
-          <span class="two loadfour"></span>
+          <div>
+            <span class="one loadone"></span>
+            <span class="two loadfour"></span>
+          </div>
         </div>
-      </div>
-      
-      <div>
         <div>
-          <span class="one loadfive"></span>
-          <span class="two loadftwo"></span>
+          <div>
+            <span class="one loadfive"></span>
+            <span class="two loadftwo"></span>
+          </div>
         </div>
-      </div>
       </section>
+    </div>
   </body>
 </html>
