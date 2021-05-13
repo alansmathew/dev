@@ -27,7 +27,12 @@
         padding: 0px;
         margin: 0px;
         scroll-behavior: smooth;
+        background-color: rgb(13,12,18);
+        transition: all .5s ease-in-out;
       }
+      ::-webkit-scrollbar {
+        width: 0px;
+        }
       /* animation starts  */
       .animationccontainer {
         opacity: 1;
@@ -36,7 +41,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: white;
+        background: rgb(13,12,18);
         transition: all .5s ease-in ;
       }
 
@@ -99,10 +104,9 @@
       .animat {
         font-family: sans-serif;
         font-size: 1.4em;
-        color: balck;
         font-weight: 900;
         letter-spacing: 3px;
-        color: rgb(80, 68, 52);
+        color: white;
         opacity: 0;
         animation: showlogo 0.5s ease-in-out 1.85s forwards;
       }
@@ -180,6 +184,62 @@
       }
       /* animation ends here  */
 
+      /* toggleing switch  */
+      .togglerClass{
+        position: relative;
+        float: right;
+        right:0px;
+        top:20px;
+      }
+      .toggler{
+        float: left;
+      }
+      .togglerClass p{
+        float: left;
+        margin:20px 10px;
+        color:white;
+        font-size: 20px;
+      }
+      input[type="checkbox"] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+      label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 53px;
+        height: 26px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        z-index: 1;
+        transition: all .2s ease-in-out;
+      }
+      label:after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+      }
+      input:checked + label {
+        background: #bada55;
+      }
+      input:checked + label:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+      }
+      label:active:after {
+        width: 35px;
+      }
+      /* toggling swithh ends here */
+
       a:focus{
         outline: none;
       }
@@ -192,7 +252,7 @@
         position: fixed;
         bottom: 0px;
         left: 60px;
-        z-index: 1;
+        z-index: 10;
         transition: all .4s ease-in-out;
       }
       .bttomleftContainer .con {
@@ -216,14 +276,14 @@
         width:24px;
         bottom: 0px;
         right: 60px;
-        z-index: 1;
+        z-index: 10;
         transition: all .4s ease-in-out;
       }
       .bttomrightContainer a {
         writing-mode: vertical-rl;
         margin: 5px;
         text-decoration: none;
-        color: black;
+        color: white;
         font-family: sans-serif;
         font-size: 14px;
         letter-spacing: 1px;
@@ -235,7 +295,7 @@
       .line {
         width: 2px;
         height: 100px;
-        background-color: black;
+        background-color: white;
       }
       .bodycontainer {
         opacity:0;
@@ -288,7 +348,7 @@
         font-size: 28px;
         font-weight: 700;
         letter-spacing: 1.2px;
-        color: rgba(0, 0, 0, 0.657);
+        color: rgba(255, 255, 255, 0.803);
       }
       .shake{
         display: inline-block;
@@ -308,12 +368,13 @@
         font-family: "Sniglet", cursive;
         font-size: 35px;
         line-height: 53px;
+        color:rgba(255, 255, 255, 0.851);
       }
       p {
         font-family: 'Varela Round', sans-serif;
         font-size: 16px;
         line-height: 27px;
-        color: rgba(0, 0, 0, 0.712);
+        color: rgba(255, 255, 255, 0.529);
         text-align: justify;
       }
       .bodycontainer .content a{
@@ -334,12 +395,17 @@
       }
 
       /* project part starts here  */
+      .projectcontainer{
+        opacity: 0;
+        transition: all .4s ease-in-out;
+      }
       .headings{
         display: inline-block;
         font-family: "Sniglet", cursive;
         letter-spacing: 1.8px;
         font-size: 27px;
         margin-bottom: 70px;
+        color:rgba(255, 255, 255, 0.851);
       }
       .headings div{
         position: relative;
@@ -350,54 +416,74 @@
         transform: rotate(-3deg);
         z-index: -1;
       }
-      .centeringBoxes{
-        padding:0px 75px ;
+
+      .horizontalscroller {
         position: relative;
+        /* width: 100%; */
+        min-height: 400px;
+        padding-left: 130px;
+        /* padding-right: 100px; */
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        /* background-color: tomato; */
+        flex-wrap: no-wrap;
+        overflow-x: scroll;
+        
       }
-      .boxess{
+      .contentbox {
+        flex: 0 0 auto;
         position: relative;
-        top:0px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        margin-left: -60px;
         display: inline-block;
-        /* background-color: rgb(18,35,63); */
-        background-color: rgb(248,248,255);
-        width:293px;
-        height:273px;
-        margin:7px;
         padding: 30px;
-        border-radius: 5px;
-        transition: all .2s ease-in-out;
+        width: 253px;
+        height: 353px;
+        background-color: rgb(21, 19, 27);
+        /* background-color: rgb(248,248,255); */
+        box-shadow: rgba(0, 0, 0, 0.646) -30px 10px 50px,
+          rgba(0, 0, 0, 0.468) 30px 10px 50px;
+        border-radius: 10px;
+        z-index: 5;
+        transition: all 0.5s ease-out;
       }
-      .boxess:hover{
-        cursor: pointer;
-        top:-7px;
+      .contentbox:hover {
+        margin-right: 20px;
+        z-index: 6;
       }
-      .boxess img{
-        width:50px;
-        height:50px;
-        opacity: .7;
+      .contentbox img {
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
       }
-      .boxess p{
+      .contentbox p {
         text-align: left;
-        height:110px;
-        overflow:hidden;
+        height: 190px;
+        color: rgba(255, 255, 255, 0.529);
+        /* color: rgba(0, 0, 0, 0.712); */
+
+        overflow: hidden;
       }
-      .boxess h2{
-        font-family: 'Varela Round', sans-serif;
+      .contentbox h2 {
+        font-family: "Varela Round", sans-serif;
         font-size: 20px;
         line-height: 23px;
-        color: black;
+        color: white;
+        /* color: black; */
+
       }
-      .boxess h6{
+      .contentbox h6 {
         position: absolute;
         bottom: 0px;
-        color: rgba(0, 0, 0, 0.712);
-        font-family: 'Varela Round', sans-serif;
+        color: rgb(222, 220, 220);
+        /* color: rgba(0, 0, 0, 0.712); */
+        font-family: "Varela Round", sans-serif;
         font-size: 11px;
+        border:solid 2px rgba(255, 255, 255, 0.201);
+        /* border:solid 2px rgba(0, 0, 0, 0.297); */
+        border-radius: 30px;
+        padding: 10px;
       }
+
 
       .footer{
         opacity:0;
@@ -415,10 +501,11 @@
         position: relative;
         height: 100px;
         width: 100%;
-        background-color: #F0F1FF;
+        background-color: #000000;
         font-family: 'Varela Round', sans-serif;
         font-size: 13px;
-        color: rgba(0, 0, 0, 0.712);
+        /* color: rgba(0, 0, 0, 0.712); */
+        color:rgba(255, 255, 255, 0.529);
       }
       .footercon{
         display: none;
@@ -426,11 +513,21 @@
       .footerunderground a{
         display:none;
       }
+      .design{
+          margin-top: -5px;
+          line-height: 19px;
+        }
     
       @media (max-width:1000px){
 
         .bttomleftContainer, .bttomrightContainer{
           display: none;
+        }
+        .togglerClass p{
+        float: left;
+        margin:23px 10px;
+        color:white;
+        font-size: 20px;
         }
         .mobileimage{
           display: block;
@@ -469,7 +566,6 @@
           font-family: 'Caveat', cursive;
           font-size: 19px;
           font-weight: 700;
-          color: rgba(0, 0, 0, 0.657);
         }
         h1 {
           text-align: left;
@@ -481,50 +577,12 @@
           font-family: 'Varela Round', sans-serif;
           font-size: 13px;
           line-height: 20px;
-          color: rgba(0, 0, 0, 0.712);
           text-align: justify;
         }
         .headings{
           font-size: 23px;
           margin-bottom: 30px;
         }
-        .centeringBoxes{
-          padding:0px 5px ;
-          position: relative;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          /* background-color: tomato; */
-        }
-        .boxess{
-          position: relative;
-          top:0px;
-          display: inline-block;
-          /* background-color: rgb(18,35,63); */
-          width:270px;
-          height:230px;
-          margin:7px;
-          padding: 30px;
-          border-radius: 5px;
-          transition: all .2s ease-in-out;
-        }
-        .boxess img{
-          width:30px;
-          height:30px;
-          opacity: .7;
-        }
-          .boxess p{
-          text-align: left;
-          height:100px;
-          overflow:hidden;
-        }
-        .boxess h2{
-          font-family: 'Varela Round', sans-serif;
-          font-size: 18px;
-          line-height: 23px;
-        }
-
-
         .footer .footerunderground{
           font-size: 9px;
         }
@@ -543,17 +601,54 @@
         .footerunderground a{
           display: block;
           text-decoration: none;
-          color: rgba(0, 0, 0, 0.712);
+          color:rgba(255, 255, 255, 0.529);
           /* font-size: 7px; */
         }
         .design{
           margin-top: -5px;
+          line-height: 14px;
         }
         
       }
+
     </style>
 
     <script>
+      var jsdata
+      ligthMode=false;
+
+      //black
+      blackBackgroundColor="background-color: rgb(13,12,18);";
+      whiteBottomLineColor="background-color: white;";
+      whiteEmail="color:white";
+      whiteH3="color: rgba(255, 255, 255, 0.803);";
+      whiteH1="color:rgba(255, 255, 255, 0.851);";
+      whiteP="color: rgba(255, 255, 255, 0.529);";
+      whiteProjectsHeading="color:rgba(255, 255, 255, 0.851);";
+      blackContentBox="background-color: rgb(21, 19, 27);";
+      whiteFolderImage="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAYAAAAdHLWhAAAABmJLR0QA/wD/AP+gvaeTAAADZklEQVR4nO3dQWtUVxjG8f+rKZquGhEFwYUpFb9ALUhdmI0i1GhcSDftQr+BXVQQdGEFK278CkK7cSMIIpW2NC50I6WIILhJ2xQsolJQIkYfF2NhOHNNRrx37hvv89vNyUnOyf3ryR0NM2BmZmZmZtYtsdQHJY0DB4DPgfU1rvsEuAFciIinNX7d7pC0W9LfatZdSdva/l5XHElfSFpsOM7/5iVtavt7zmrgiJO0DrgHTIxwH7PAVEQsjnDNFWGsYuwwg3F+An4Dnte07kHg077HO4GjwJmavv77S9LV4gj6sYE1PpI0V6zzVNLWutd670j6o7hwXza0zpSkF8VaNyRV/a3urFUVY+UFetbEwhHxM3C+GP4M+LaJ9Vaqtv+0HgemgS19YyckLQBz7WxpZB4DNyPiv6UmtRooIp5IOkzvJmT16+Ex4Gx7uxqpZ5IuAMci4kHVhKojbqQi4hfgZNv7aMka4AhwU9LmqgmtB3rtO+Bc25to0SRwUdJAj7Z/BgEQEQK+kXSF3vOwSZLsrSFjwFZgvG9sOzADXFzyMyXdKW59Z5rbZ3dJ2ijpdnGtfyjnZTniOici7jP4NGPgiboDtau8c/uwnOBAyTlQcg6U3DC3skclfQ+sa3ozHfMQuL/cpGEC7Xj3vViFCeDj5Sb5iEvOgZIb5ohboPffAtcB/85APcbo/SrbKWDtW31mxT/1nGpihwaSThfX+k45Z5gj7vcG9mY9t5abMEyglzVsxKote219k5CcAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJVcVqHx1+TWj2EhHla86P/DK/lWB/ikeT9e2HSvtLx7PlxOq3rvhGrC77/EhSeuBX4Hn9e2t0z4AdgFTxfi1cmKUA5ImgHv4DZ1G7QHwSUQ87h8cOOIi4hHwNX6nk1FaBL4q48Ab7uIi4jKwF/ir4Y0Z/AnsiYgrVR8cOOL6SRoH9gE7gQ31763T/gVmgUsRsdD2ZszMzMzMzLJ4BR1/81tLFuuIAAAAAElFTkSuQmCC";
+      whiteContentHeading="color:rgba(255, 255, 255, 0.851)";
+      whiteContentp="color: rgba(255, 255, 255, 0.529);";
+      whiteContentH6="color:rgb(222, 220, 220);solid 2px rgba(255, 255, 255, 0.201);";
+      footerp="color: rgba(255, 255, 255, 0.529)";
+      blackfooterBackground="background-color:#000000;"+whiteP;
+
+
+      //white
+      whiteBcakgroundColor="background-color: white;"
+      blackBottomLineColor="background-color: black;";
+      blackEmail="color:black";
+      blackH3="color: rgba(0, 0, 0, 0.657);";
+      blackH1="color:black;";
+      blackP="color: rgba(0, 0, 0, 0.712);";
+      blackProjectsHeading="color:black";
+      whiteContentBox="background-color: rgb(248,248,255);";
+      blackFolderImage="https://img.icons8.com/pastel-glyph/128/000000/folder-invoices--v2.png";
+      blackContentHeading="color:black;";
+      blackContentp="color: rgba(0, 0, 0, 0.712)";
+      blackContentH6="color:rgba(0, 0, 0, 0.712);border:solid 2px rgba(0, 0, 0, 0.297);";
+      whitefooterBackground="background-color:#F0F1FF;"+blackP;
+
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
@@ -563,6 +658,14 @@
           document.getElementById("btmleft").style.cssText = "display:none";
           document.getElementById("btmright").style.cssText = "display:none";
           document.getElementById("ftr").style.cssText = "display:none";
+          document.getElementById("projectContainer").style.cssText = "display:none";
+          
+          //test for slide up animation
+          document.getElementsByClassName("size1")[0].children[0].style.cssText="opacity: 0;transform: translate(0px,10px)"
+          document.getElementsByClassName("size1")[0].children[1].style.cssText="opacity: 0;transform: translate(0px,20px)"
+          document.getElementsByClassName("size1")[0].children[2].style.cssText="opacity: 0;transform: translate(0px,30px)"
+          document.getElementsByClassName("size2")[0].style.cssText="opacity: 0;transform: translate(20px,0px)"
+          document.getElementsByClassName("mobileimage")[0].style.cssText="opacity: 0;transform: translate(0px,-10px)"
 
           await sleep(3000); // 4seconds sleep
 			    document.getElementById("ani").style.cssText = "opacity: 0;";
@@ -570,20 +673,28 @@
           document.getElementById("btmleft").style.cssText = "display:block";
           document.getElementById("btmright").style.cssText = "display:block";
           document.getElementById("ftr").style.cssText = "display:block";
+          document.getElementById("projectContainer").style.cssText = "display:block";
 
           await sleep(600) // .5 seconds sleep
           document.getElementById("ani").style.cssText = "display: none;";
 
           document.getElementById("bdycont").style.cssText = "opacity: 1";
-          await sleep(700)
+          
+          //slight pop up animation
+          document.getElementsByClassName("mobileimage")[0].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .6s;";
+          document.getElementsByClassName("size1")[0].children[0].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .3s;";
+          document.getElementsByClassName("size1")[0].children[1].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .4s";
+          document.getElementsByClassName("size1")[0].children[2].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .5s";
+          document.getElementsByClassName("size2")[0].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .5s"
+
+          await sleep(1000)
           document.getElementById("btmleft").style.cssText = "opacity: 1";
           document.getElementById("btmright").style.cssText = "opacity: 1";
+          document.getElementById("projectContainer").style.cssText = "opacity: 1";
           document.getElementById("ftr").style.cssText = "opacity: 1";
 		  });
 
-      var jsdata
-
-        function loadDoc() {
+      function loadDoc() {
           var pageToVisit = "https://api.github.com/users/alansmathew/repos";
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function () {
@@ -609,19 +720,101 @@
                   nameOfRepo=jsdata[i].name;
                   htmlUrl=jsdata[i].html_url;
 
-                  htmlToAppend+='<a href="'+htmlUrl+'" target="_blank"> <div class="boxess"> <img src="https://img.icons8.com/pastel-glyph/128/000000/folder-invoices--v2.png"/> <h2><strong>'+nameOfRepo+'</strong></h2><p>'+desc+'</p><h6>'+lang+'</h6></div></a>';
+                  htmlToAppend+='<a href="'+htmlUrl+'" target="_blank"> <div class="contentbox"> <img class="contentImage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAYAAAAdHLWhAAAABmJLR0QA/wD/AP+gvaeTAAADZklEQVR4nO3dQWtUVxjG8f+rKZquGhEFwYUpFb9ALUhdmI0i1GhcSDftQr+BXVQQdGEFK278CkK7cSMIIpW2NC50I6WIILhJ2xQsolJQIkYfF2NhOHNNRrx37hvv89vNyUnOyf3ryR0NM2BmZmZmZtYtsdQHJY0DB4DPgfU1rvsEuAFciIinNX7d7pC0W9LfatZdSdva/l5XHElfSFpsOM7/5iVtavt7zmrgiJO0DrgHTIxwH7PAVEQsjnDNFWGsYuwwg3F+An4Dnte07kHg077HO4GjwJmavv77S9LV4gj6sYE1PpI0V6zzVNLWutd670j6o7hwXza0zpSkF8VaNyRV/a3urFUVY+UFetbEwhHxM3C+GP4M+LaJ9Vaqtv+0HgemgS19YyckLQBz7WxpZB4DNyPiv6UmtRooIp5IOkzvJmT16+Ex4Gx7uxqpZ5IuAMci4kHVhKojbqQi4hfgZNv7aMka4AhwU9LmqgmtB3rtO+Bc25to0SRwUdJAj7Z/BgEQEQK+kXSF3vOwSZLsrSFjwFZgvG9sOzADXFzyMyXdKW59Z5rbZ3dJ2ijpdnGtfyjnZTniOici7jP4NGPgiboDtau8c/uwnOBAyTlQcg6U3DC3skclfQ+sa3ozHfMQuL/cpGEC7Xj3vViFCeDj5Sb5iEvOgZIb5ohboPffAtcB/85APcbo/SrbKWDtW31mxT/1nGpihwaSThfX+k45Z5gj7vcG9mY9t5abMEyglzVsxKote219k5CcAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJVcVqHx1+TWj2EhHla86P/DK/lWB/ikeT9e2HSvtLx7PlxOq3rvhGrC77/EhSeuBX4Hn9e2t0z4AdgFTxfi1cmKUA5ImgHv4DZ1G7QHwSUQ87h8cOOIi4hHwNX6nk1FaBL4q48Ab7uIi4jKwF/ir4Y0Z/AnsiYgrVR8cOOL6SRoH9gE7gQ31763T/gVmgUsRsdD2ZszMzMzMzLJ4BR1/81tLFuuIAAAAAElFTkSuQmCC" /> <h2><strong>'+nameOfRepo+'</strong></h2><p>'+desc+'</p><h6>'+lang+'</h6></div></a>';
 
                 }
-                document.getElementsByClassName("centeringBoxes")[0].innerHTML=htmlToAppend;
+                document.getElementsByClassName("horizontalscroller")[0].innerHTML=htmlToAppend;
             }
           };
           xhttp.open("GET", pageToVisit, true);
           xhttp.send();
         }
 
+      function toggle(){
+        body=document.querySelector("body");
+        line0=document.getElementById("firstLine");
+        line2=document.getElementById("secondLine");
+        email=document.getElementById("emailid")
+        h3=document.querySelector("h3")
+        h1=document.querySelector("h1")
+        firstP=line1=document.getElementById("firstP")
+        projectHeading=document.getElementsByClassName("headings")[0]
+        contentBox=document.getElementsByClassName("contentbox")
+        contentImage=document.getElementsByClassName("contentImage");
+        footerBackground=document.getElementsByClassName('footerunderground')[0]
+      
+        if (ligthMode){ // enabling dark mode
+          ligthMode=false;
+          body.style.cssText=blackBackgroundColor;
+          line0.style.cssText=whiteBottomLineColor;
+          line2.style.cssText=whiteBottomLineColor;
+          email.style.cssText=whiteEmail;
+          h3.style.cssText=whiteH3;
+          h1.style.cssText=whiteH1;
+          firstP.style.cssText=whiteP;
+          projectHeading.style.cssText=whiteProjectsHeading;
+          for(p=0;p<contentBox.length;p++){
+            contentBox[p].style.cssText=blackContentBox;
+            contentImage[p].setAttribute("src",whiteFolderImage);
+            document.getElementsByClassName("contentbox")[p].children[1].style.cssText=whiteContentHeading;
+            document.getElementsByClassName("contentbox")[p].children[2].style.cssText=whiteContentp;
+            document.getElementsByClassName("contentbox")[p].children[3].style.cssText=whiteContentH6;
+          }
+          document.getElementById('footerSvg').style.fill="#000000";
+          footerBackground.style.cssText=blackfooterBackground;
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src="assets/githubwhite.png";
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src="assets/instagramwhite.png";
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src="assets/linkedinwhite.png";
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[3].children[0].children[0].src="assets/twitterwhite.png";
+
+          //mobile footer images
+          document.getElementsByClassName("footercon")[0].children[0].children[0].src="assets/githubwhite.png";
+          document.getElementsByClassName("footercon")[1].children[0].children[0].src="assets/instagramwhite.png";
+          document.getElementsByClassName("footercon")[2].children[0].children[0].src="assets/linkedinwhite.png";
+          document.getElementsByClassName("footercon")[3].children[0].children[0].src="assets/twitterwhite.png";
+
+          document.getElementsByClassName("footerunderground")[0].children[0].children[5].style.cssText=whiteP
+
+
+          
+        }
+        else{ // enabling light mode
+          ligthMode=true;
+          body.style.cssText=whiteBcakgroundColor;
+          line0.style.cssText=blackBottomLineColor;
+          line2.style.cssText=blackBottomLineColor;
+          email.style.cssText=blackEmail;
+          h3.style.cssText=blackH3;
+          h1.style.cssText=blackH1;
+          firstP.style.cssText=blackP;
+          projectHeading.style.cssText=blackProjectsHeading;
+          for(p=0;p<contentBox.length;p++){
+            contentBox[p].style.cssText=whiteContentBox;
+            contentImage[p].setAttribute("src",blackFolderImage);
+            document.getElementsByClassName("contentbox")[p].children[1].style.cssText=blackContentHeading;
+            document.getElementsByClassName("contentbox")[p].children[2].style.cssText=blackContentp;
+            document.getElementsByClassName("contentbox")[p].children[3].style.cssText=blackContentH6;
+          }
+
+          document.getElementById('footerSvg').style.fill="#F0F1FF";
+          footerBackground.style.cssText=whitefooterBackground;
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src="assets/githubblack.png";
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src="assets/instagramblack.png";
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src="assets/linkedinblack.png";
+          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[3].children[0].children[0].src="assets/twitterblack.png";
+
+          //mobile footer images
+          document.getElementsByClassName("footercon")[0].children[0].children[0].src="assets/githubblack.png";
+          document.getElementsByClassName("footercon")[1].children[0].children[0].src="assets/instagramblack.png";
+          document.getElementsByClassName("footercon")[2].children[0].children[0].src="assets/linkedinblack.png";
+          document.getElementsByClassName("footercon")[3].children[0].children[0].src="assets/twitterblack.png";
+          document.getElementsByClassName("footerunderground")[0].children[0].children[5].style.cssText=blackP;
+        }
+      }
     </script>
   </head>
   <body onload="loadDoc()">
+  <!-- <body> -->
 
   <!-- animation --------------------------------------- -->
     <div class="animationccontainer" id="ani">
@@ -652,6 +845,14 @@
     <!-- body stats here  -->
     <div class="bodycontainer" id="bdycont">
 
+      <div class="togglerClass">
+        <p>🌚</p>
+        <div class="toggler">
+          <input type="checkbox" id="switch" /> <label onclick="toggle()" for="switch">Toggle</label>  
+        </div>
+        <p>🌝</p>
+      </div>
+      
       <div class="blockcontainer">
         <div class="centerbox">
 
@@ -684,7 +885,7 @@
               I'm a developer, creative thinker & self-motivated person ->
               <div style="color: rgb(114, 94, 245); display: inline;">likes to solve problems and help others ...</p>
             </h1> 
-            <p>
+            <p id="firstP">
                 I'm living in kerala, kottayam to be exact. I code in Swift, HTML, CSS, Javascript, PHP and Python,
                 and is pursuing MCA at <a href="https://www.ajce.in" target="_blank">Amal Jyothi College of Engineering</a>.
                 I would love to think and talk about technologies like SpaceX, Tessla, Starlink, iOS etc... If you are also 
@@ -717,28 +918,18 @@
 
         </div>
       </div>
-
-      <div class="blockcontainer">
-        
-        <center><div class="headings">Projects <div></div></div></center>
-
-        <div class="centeringBoxes">
-
-          <!-- <a href="">
-            <div class="boxess">
-              <img src="https://img.icons8.com/pastel-glyph/128/000000/folder-invoices--v2.png"/>
-              <h2><strong>Find project otfind lost device without internet</strong></h2>
-              <p>Building a custom multisite compatible WordPress plugin to build global search with Algolia</p>
-              <h6>Node Express Firebase Vue</h6>
-            </div>
-          </a> -->
-        
-
-        </div>
-
-      </div>
-
     </div>
+
+    <!-- this is placed outiside body container because to get 100% width on horizontal scroll  -->
+
+    <div class="projectcontainer" id="projectContainer">
+      <center><div class="headings">Projects <div></div></div></center>
+      <div class="paddingContainer">
+        <div class="horizontalscroller">
+        </div>
+      </div>
+    </div>
+
     <!-- body ends here  -->
 
     <div class="bttomleftContainer" id="btmleft">
@@ -746,66 +937,66 @@
         <div class="con">
           <a href="https://github.com/alansmathew" target="_blank"
             ><img
-              src="https://img.icons8.com/fluent-systems-filled/54/000000/github.png"
+              src="assets/githubwhite.png"
           /></a>
         </div>
         <div class="con">
           <a href="https://www.instagram.com/alan_s_mathew" target="_blank"
             ><img
-              src="https://img.icons8.com/small/64/000000/instagram-new.png"
+              src="assets/instagramwhite.png"
           /></a>
         </div>
         <div class="con">
           <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"
-            ><img src="https://img.icons8.com/ios/90/000000/linkedin-2--v1.png"
+            ><img src="assets/linkedinwhite.png"
           /></a>
         </div>
         <div class="con">
           <a href="https://twitter.com/AlanSMathew008" target="_blank"
-            ><img src="https://img.icons8.com/ios/96/000000/twitter--v1.png"
+            ><img src="assets/twitterwhite.png"
           /></a>
         </div>
-        <div class="line"></div>
+        <div class="line" id="firstLine"></div>
       </center>
     </div>
 
     <div class="bttomrightContainer" id="btmright">
       <center>
-        <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a>
-        <div class="line"></div>
+        <a href="mailto:alansmathew@icloud.com" id="emailid">alansmathew@icloud.com</a>
+        <div class="line" id="secondLine"></div>
       </center>
     </div>
 
     <div class="footer" id="ftr">
-      <svg width="100%" height="180" viewBox="0 0 1440 120" fill="#F0F1FF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" >
-        <path d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="#F0F1FF"></path>
+      <svg width="100%" height="180" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" >
+        <path d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" style="fill: #000000;"; id="footerSvg"></path>
       </svg>
       <div class="footerunderground">
           <center>
             <div class="footercon">
               <a href="https://github.com/alansmathew" target="_blank"
                 ><img
-                  src="https://img.icons8.com/fluent-systems-filled/54/000000/github.png"
+                  src="assets/githubwhite.png"
               /></a>
             </div>
             <div class="footercon">
               <a href="https://www.instagram.com/alan_s_mathew" target="_blank"
                 ><img
-                  src="https://img.icons8.com/small/64/000000/instagram-new.png"
+                  src="assets/instagramwhite.png"
               /></a>
             </div>
             <div class="footercon">
               <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"
-                ><img src="https://img.icons8.com/ios/90/000000/linkedin-2--v1.png"
+                ><img src="assets/linkedinwhite.png"
               /></a>
             </div>
             <div class="footercon">
               <a href="https://twitter.com/AlanSMathew008" target="_blank"
-                ><img src="https://img.icons8.com/ios/96/000000/twitter--v1.png"
+                ><img src="assets/twitterwhite.png"
               /></a>
             </div> <br>
             <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a><br>
-            <div class="design">Designed & build by Alan S Mathew</div>
+            <div class="design">Designed & build by Alan S Mathew <br>Feel free to download this and modifiy as per you likings</div>
           </center>
       </div>
     </div>
