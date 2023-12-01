@@ -489,6 +489,61 @@
         z-index: -1;
       }
 
+      .projectTimeline{
+        position: relative;
+        width: 90%;
+        height : 500px;
+        /* background-color: aqua; */
+        margin: auto;
+      }
+      .projectTimeline .Half{
+        margin-left: 2%;
+        color: black;
+        width: 45%;
+        height: 95%;
+        position: relative;
+        float: left;
+        /* background-color: white; */
+      }
+      .projectTimeline .Half a{
+        color: white;
+        border: none;
+        text-decoration: none;
+        font-family: 'Varela Round';
+        font-style: italic;
+        font-size: 18px;
+      }
+      .projectTimeline .Half h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-family: "Sniglet", cursive;
+        color: rgba(255, 255, 255, 0.851);
+        font-size: 100;
+        line-height: 180%;
+      }
+      .projectTimeline .Half img{
+        /* height : 400px; */
+        position: relative;
+        width : 28%;
+
+      }
+      .projectTimeline .Half .ImageOne{
+        width: 33%;
+        left: 4%;
+        top: -10px;
+        position: relative;
+      }
+
+      .projectTimeline .Half .ImageTwo{
+        width: 33%;
+        left: -6%;
+        top: -10px;
+        position: relative;
+        z-index: 0;
+      }
+      
       .horizontalscroller {
         position: relative;
         /* width: 100%; */
@@ -592,10 +647,10 @@
           display: none;
         }
         .togglerClass p{
-        float: left;
-        margin:23px 10px;
-        color:white;
-        font-size: 20px;
+          float: left;
+          margin:23px 10px;
+          color:white;
+          font-size: 20px;
         }
         .mobileimage{
           display: block;
@@ -648,36 +703,91 @@
           text-align: justify;
         }
         .headings{
+          margin-top: 20px;
           font-size: 23px;
           margin-bottom: 30px;
         }
-        .footer .footerunderground{
-          font-size: 9px;
-        }
-        .footercon{
-          display: block;
-          width:15px;
-          height:15px;
-          /* float: left; */
-          display: inline-block;
-          margin:8px 6px;
-        }
-        .footercon img{
-          width:15px;
-          height:15px;
-        }
-        .footerunderground a{
-          display: block;
-          text-decoration: none;
-          color:rgba(255, 255, 255, 0.529);
-          /* font-size: 7px; */
-        }
-        .design{
-          margin-top: -5px;
-          line-height: 14px;
-        }
-        
+        .projectTimeline{
+          position: relative;
+          width: 90%;
+          height : 650px;
+          /* background-color: blue; */
+          margin: auto;
       }
+        .projectTimeline .Half{
+          margin-left: 2%;
+          color: black;
+          width: 90%;
+          height: 49%;
+          position: relative;
+          float: left;
+          /* background-color: white; */
+      }
+      .projectTimeline .Half h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-family: "Sniglet", cursive;
+        color: rgba(255, 255, 255, 0.851);
+        font-size: 15px;
+        line-height: 20px;
+      }
+      .projectTimeline .Half a{
+        color: white;
+        border: none;
+        text-decoration: none;
+        font-family: 'Varela Round';
+        font-style: italic;
+        font-size: 14px;
+      }
+      .projectTimeline .Half img{
+        margin-top: 5%;
+        position: relative;
+        width : 30%;
+      }
+      .projectTimeline .Half .ImageOne{
+        width: 33%;
+        left: 4%;
+        top: -10px;
+        position: relative;
+      }
+
+      .projectTimeline .Half .ImageTwo{
+        width: 33%;
+        left: -6%;
+        top: -10px;
+        position: relative;
+        z-index: 0;
+      }
+      
+      .footer .footerunderground{
+        font-size: 9px;
+      }
+      .footercon{
+        display: block;
+        width:15px;
+        height:15px;
+        /* float: left; */
+        display: inline-block;
+        margin:8px 6px;
+      }
+      .footercon img{
+        width:15px;
+        height:15px;
+      }
+      .footerunderground a{
+        display: block;
+        text-decoration: none;
+        color:rgba(255, 255, 255, 0.529);
+        /* font-size: 7px; */
+      }
+      .design{
+        margin-top: -5px;
+        line-height: 14px;
+      }
+      
+    }
 
     </style>
 
@@ -778,6 +888,7 @@
         h1=document.querySelector("h1")
         firstP=line1=document.getElementById("firstP")
         projectHeading=document.getElementsByClassName("headings")[0]
+        projectHeading1=document.getElementsByClassName("headings")[1]
         contentBox=document.getElementsByClassName("contentbox")
         contentImage=document.getElementsByClassName("contentImage");
         footerBackground=document.getElementsByClassName('footerunderground')[0]
@@ -792,6 +903,7 @@
           h1.style.cssText=whiteH1;
           firstP.style.cssText=whiteP;
           projectHeading.style.cssText=whiteProjectsHeading;
+          projectHeading1.style.cssText=whiteProjectsHeading;
           for(p=0;p<contentBox.length;p++){
             contentBox[p].style.cssText=blackContentBox;
             contentImage[p].setAttribute("src",whiteFolderImage);
@@ -801,6 +913,10 @@
           }
           document.getElementById('footerSvg').style.fill="#000000";
           footerBackground.style.cssText=blackfooterBackground;
+          document.getElementsByClassName("Half")[0].children[0].style.cssText = whiteContentp
+          document.getElementsByClassName("Half")[0].children[1].style.cssText = whiteContentp
+          document.getElementsByClassName("Half")[0].children[2].style.cssText = whiteContentp
+
           document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src="assets/githubwhite.png";
           document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src="assets/instagramwhite.png";
           document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src="assets/linkedinwhite.png";
@@ -827,6 +943,7 @@
           h1.style.cssText=blackH1;
           firstP.style.cssText=blackP;
           projectHeading.style.cssText=blackProjectsHeading;
+          projectHeading1.style.cssText=blackProjectsHeading;
           for(p=0;p<contentBox.length;p++){
             contentBox[p].style.cssText=whiteContentBox;
             contentImage[p].setAttribute("src",blackFolderImage);
@@ -835,6 +952,9 @@
             document.getElementsByClassName("contentbox")[p].children[3].style.cssText=blackContentH6;
           }
 
+          document.getElementsByClassName("Half")[0].children[0].style.cssText = blackP
+          document.getElementsByClassName("Half")[0].children[1].style.cssText = blackP
+          document.getElementsByClassName("Half")[0].children[2].style.cssText = blackP
           document.getElementById('footerSvg').style.fill="#F0F1FF";
           footerBackground.style.cssText=whitefooterBackground;
           document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src="assets/githubblack.png";
@@ -1031,6 +1151,30 @@
     <!-- this is placed outiside body container because to get 100% width on horizontal scroll  -->
 
     <div class="projectcontainer" id="projectContainer">
+     
+      <div class="recentProjects">
+        <center><div class="headings">Recent Projects <div></div></div></center>
+        <div class="projectTimeline">
+          <div class="Half">
+            <h3> FoodARoma</h3>
+            <h4>
+              FoodARoma redefines customer interaction, enabling dynamic food customization through AR. Utilizing mobile cameras and computational prowess, we offer an interactive representation of pizza components, empowering informed choices.
+              Our technology not only enhances consumer interaction but also provides essential business tools like order management, menu control, and sales analytics, fostering growth for small enterprises in the competitive industry.
+            </h4>
+           <a href="https://github.com/alansmathew/FoodARoma.git">Get more information ➡</a>
+          </div>
+          <div class="Half">
+            <center>
+              <img class="ImageOne" src="assets/projectImages/p1imageOne.png" alt="" srcset="">
+              <img style="z-index: 10;" src="assets/demoVideo.gif" alt="Loading Demo" srcset="">
+              <img class="ImageTwo" src="assets/projectImages/p1ImageTwo.png" alt="">
+            </center>
+          </div>
+          
+        </div>
+      </div>
+    <br>
+    <br>
       <center><div class="headings">Projects <div></div></div></center>
       <div class="paddingContainer">
         <div class="horizontalscroller">
