@@ -1,0 +1,125 @@
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+body {
+    font-family: 'Arial, sans-serif';
+    /* background-color: #fdfdfd; */
+    background-color: rgba( 233, 231,223, 1); 
+    /* background-color: rgba(237, 233, 216, 1);  */
+    /* background-color: rgba(232,231,227,1);  */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation {
+    /* background: #fff; */
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+    margin: 20px;
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.invitation h1 {
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+.and {
+    font-style: italic;
+    color: #77ab59;
+}
+
+.invitation h3 {
+    font-family: "Marck Script", cursive;
+    font-size: 1em;
+    font-weight: 400;
+    color: #5f5f5f;
+    /* font-size: medium; */
+}
+
+.invitation h2 {
+    font-family: "Marck Script", cursive;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #4d4d4d;
+    /* font-size: large; */
+}
+
+.countdown {
+    font-family: "Zen Maru Gothic", serif;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.countdown-box {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.number {
+    font-family: "Zen Maru Gothic", serif;
+    display: block;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.label {
+    font-weight: 200;
+    display: block;
+    font-size: 0.78em;
+    color: #555;
+}
+
+.wedding-image {
+    border-radius: 8px;
+    margin: 20px 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#calendar-links {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 10px;
+    /* background-color: #77ab59; */
+    background-color: rgb(218, 208, 191);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Zen Maru Gothic", serif;
+}
+
+#calendar-links img {
+    color: #fff;
+    padding-right: 5px;
+    max-width: 15px;
+    height: auto;
+}
+
+#calendar-links a {
+    font-size: 0.9em;
+    color: #fff;
+    text-decoration: none;
+}
+
+#calendar-links:hover {
+    background-color: #5a8f47;
+}
