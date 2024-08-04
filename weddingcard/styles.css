@@ -31,7 +31,8 @@ body {
     font-weight: 800;
     font-style: italic;
     font-size: 5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 25px;
+    margin-top : 100px
 }
 
 .and {
@@ -88,7 +89,7 @@ body {
 
 .wedding-image {
     border-radius: 8px;
-    margin: 20px 0;
+    /* margin: 20px 0; */
     max-width: 100%;
     height: auto;
     object-fit: cover;
