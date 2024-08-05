@@ -30,7 +30,7 @@ body {
     font-weight: 800;
     font-style: italic;
     font-size: 5em;
-    margin-top : 50px
+    margin-top : 5px
 }
 
 .and {
@@ -89,10 +89,8 @@ body {
 .wedding-image {
     margin-top: -70px;
     border-radius: 8px;
-    /* margin: 20px 0; */
     max-width: 100%;
     height: auto;
-    /* object-fit: cover; */
 }
 
 #calendar-links {
@@ -123,4 +121,97 @@ body {
 
 #calendar-links:hover {
     background-color: #5a8f47;
+}
+
+.venueDetailsMain{
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+
+.venueDetailsMain {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.venueDetailsMain h2 {
+    font-family: "Reenie Beanie", cursive;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: #4e4e4e;
+    margin-bottom: 0;
+}
+
+.venueDetailsMain .subMenue {
+    font-family: "Marck Script", cursive;
+    color: rgb(75, 75, 75);
+}
+
+.venueDetailsMain .venue-details {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.venueDetailsMain .venue-column {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.venueDetailsMain .venue-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.venueDetailsMain .venue-column h3 {
+    font-family: "Marck Script", cursive;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #3a3a3a;
+    text-align: center;
+    margin: 0;
+}
+
+.venueDetailsMain .venue-column p {
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.venueDetailsMain .venue-column .location {
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.venueDetailsMain .venue-column .location a{
+    font-family: "Marck Script", cursive;
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-style: italic;
+}
+
+.lastP {
+    margin-top: 50px;
+    font-family: "Zen Maru Gothic", serif;
+    text-decoration: none;
+    color: rgba(48, 48, 46, 0.895);;
+}
+
+.footer{
+    font-family: sans-serif;
+    font-size: 10px;
+    color: rgba(94, 94, 94, 0.694);
+    padding-bottom: 20px;
+}
+.footer p{
+    margin : 0;
+    padding-bottom: 5px;
 }
