@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
     function updateCountdown() {
-        const weddingDate = new Date('January 16, 2025 12:00:00').getTime();
+        const weddingDate = new Date('January 16, 2025 16:00:00').getTime();
         const now = new Date().getTime();
         const distance = weddingDate - now;
 
