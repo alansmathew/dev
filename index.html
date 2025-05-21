@@ -1,729 +1,836 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="alan, Alan, alansmathew008, Alan Sebastian Mathew, alansmathew, kanjirakattu, Kadayanickadu, ullayam, iOS Developer, Tech Enthusiast, AJCE, Amal jyothi Collage, Elangoi, 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="alan, Alan, alansmathew008, Alan Sebastian Mathew, alansmathew, kanjirakattu, Kadayanickadu, ullayam, iOS Developer, Tech Enthusiast, AJCE, Amal jyothi Collage, Elangoi, 
     Holi Family International School Elangoi, CCM HSS Karrikattoor, ST JOHNS HSS Nedumkunnam, opnesource, Open Source">
-    <meta name="description" content="Personal webpage describing me and the opensource projects I work on, including this website.">
-    <meta name="author" content="Alan S Mathew">
-    <title>Alan Sebastian Mathew</title>
-    <link rel = "icon" href ="https://raw.githubusercontent.com/alansmathew/dev/master/assets/ASM.png" 
-        type = "image/x-icon">
+  <meta name="description"
+    content="Personal webpage describing me and the opensource projects I work on, including this website.">
+  <meta name="author" content="Alan S Mathew">
+  <title>Alan Sebastian Mathew</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/alansmathew/dev/master/assets/ASM.png" type="image/x-icon">
 
-    <!-- fonts  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <!--h2 -->
+  <!-- fonts  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <!--h2 -->
 
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap"
-      rel="stylesheet"
-    /> <!--h1 -->
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet" /> <!--h1 -->
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
-    /> <!--p -->
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" /> <!--p -->
 
-    <!-- <script src="https://api.countapi.xyz/hit/alansmathew.github.io/visits?callback=liveViews" async></script> -->
+  <!-- <script src="scripts/visitCount.js"></script> -->
+  <!-- <script src="https://api.countapi.xyz/hit/alansmathew.github.io/visits?callback=liveViews" async></script> -->
 
-    <style>
-      body {
-        padding: 0px;
-        margin: 0px;
-        scroll-behavior: smooth;
-        background-color: rgb(13,12,18);
-        transition: all .5s ease-in-out;
-      }
-      ::-webkit-scrollbar {
-        width: 0px;
-      }
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      scroll-behavior: smooth;
+      background-color: rgb(13, 12, 18);
+      transition: all .5s ease-in-out;
+    }
 
-      /* animation starts  */
-      .animationccontainer {
-        opacity: 1;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        background: rgb(13,12,18);
-        justify-content: center;
-        row-gap: 70px;
-        transition: all .5s ease-in;
-        flex-direction: column;
-      }
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
 
-      .animationccontainer .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    /* animation starts  */
+    .animationccontainer {
+      opacity: 1;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: rgb(13, 12, 18);
+      justify-content: center;
+      row-gap: 70px;
+      transition: all .5s ease-in;
+      flex-direction: column;
+    }
 
-      .animationccontainer div {
-        position: absolute;
-        width: 120px;
-        height: 68px;
-      }
+    .animationccontainer .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .animationccontainer div:nth-of-type(2) {
-        transform: rotate(60deg);
-      }
-      .animationccontainer div:nth-of-type(3) {
-        transform: rotate(-60deg);
-      }
+    .animationccontainer div {
+      position: absolute;
+      width: 120px;
+      height: 68px;
+    }
 
-      .animationccontainer div div {
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
+    .animationccontainer div:nth-of-type(2) {
+      transform: rotate(60deg);
+    }
 
-      .animationccontainer div div span {
-        position: absolute;
-        width: 6px;
-        height: 0%;
-        background: rgb(255, 152, 17);
-      }
+    .animationccontainer div:nth-of-type(3) {
+      transform: rotate(-60deg);
+    }
 
-      /* coffie animathion */
-      .animationccontainer .coffee {
-        background: #fff;
-        display: grid;
-        border-radius: 4px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        height: 40px;
-        position: relative;
-        width: 40px;
-        padding: 2px;
-        justify-items: center; 
-      }
-      .animationccontainer .coffee:before {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        content: '';
-        height: 26px;
-        width: 20px;
-        border: 4px solid #fff;
-        position: absolute;
-        top: 50%;
-        margin-top: -13px;
-        margin-left: -10px;
-        left: 100%;
-        border-radius: 4px; 
-      }
-      .animationccontainer .coffee div {
-        height: 20px;
-        width: 8px;
-        background: #fff;
-        opacity: .3;
-        -webkit-animation: coffee 2s infinite;
-                animation: coffee 2s infinite; 
-      }
-      .coffee div:nth-child(1) {
-        -webkit-animation-delay: 0.4s;
-                animation-delay: 0.4s; 
-      }
-      .coffee div:nth-child(2) {
-        -webkit-animation-delay: 1s;
-                animation-delay: 1s; 
-      }
-      .coffee div:nth-child(3) {
-        -webkit-animation-delay: 0.2s;
-                animation-delay: 0.2s; 
-      }
-      .loadftwo {
-        right: 0;
-        animation: load2 0.4s linear forwards;
-      }
-      .loadthree {
-        right: 0;
-        animation: load3 0.3s linear 0.4s forwards;
-      }
-      .loadfour {
-        right: 0;
-        animation: load4 0.2s linear 0.7s forwards;
-      }
-      .loadfive {
-        left: 0;
-        animation: load5 0.2s linear 0.9s forwards;
-      }
-      .loadsix {
-        left: 0;
-        animation: load6 0.25s linear 1.1s forwards;
-      }
-      .loadone {
-        left: 0;
-        animation: load1 0.4s linear 1.35s forwards;
-      }
-      .animat {
-        font-family: sans-serif;
-        font-size: 1.4em;
-        font-weight: 900;
-        letter-spacing: 3px;
-        color: white;
+    .animationccontainer div div {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .animationccontainer div div span {
+      position: absolute;
+      width: 6px;
+      height: 0%;
+      background: rgb(255, 152, 17);
+    }
+
+    /* coffie animathion */
+    .animationccontainer .coffee {
+      background: #fff;
+      display: grid;
+      border-radius: 4px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      height: 40px;
+      position: relative;
+      width: 40px;
+      padding: 2px;
+      justify-items: center;
+    }
+
+    .animationccontainer .coffee:before {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      content: '';
+      height: 26px;
+      width: 20px;
+      border: 4px solid #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -13px;
+      margin-left: -10px;
+      left: 100%;
+      border-radius: 4px;
+    }
+
+    .animationccontainer .coffee div {
+      height: 20px;
+      width: 8px;
+      background: #fff;
+      opacity: .3;
+      -webkit-animation: coffee 2s infinite;
+      animation: coffee 2s infinite;
+    }
+
+    .coffee div:nth-child(1) {
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+
+    .coffee div:nth-child(2) {
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+
+    .coffee div:nth-child(3) {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+
+    .loadftwo {
+      right: 0;
+      animation: load2 0.4s linear forwards;
+    }
+
+    .loadthree {
+      right: 0;
+      animation: load3 0.3s linear 0.4s forwards;
+    }
+
+    .loadfour {
+      right: 0;
+      animation: load4 0.2s linear 0.7s forwards;
+    }
+
+    .loadfive {
+      left: 0;
+      animation: load5 0.2s linear 0.9s forwards;
+    }
+
+    .loadsix {
+      left: 0;
+      animation: load6 0.25s linear 1.1s forwards;
+    }
+
+    .loadone {
+      left: 0;
+      animation: load1 0.4s linear 1.35s forwards;
+    }
+
+    .animat {
+      font-family: sans-serif;
+      font-size: 1.4em;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: white;
+      opacity: 0;
+      animation: showlogo 0.5s ease-in-out 1.85s forwards;
+    }
+
+    @-webkit-keyframes coffee {
+      100% {
         opacity: 0;
-        animation: showlogo 0.5s ease-in-out 1.85s forwards;
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
       }
-      @-webkit-keyframes coffee {
-        100% {
-          opacity: 0;
-          -webkit-transform: translateY(-200%);
-                  transform: translateY(-200%); 
-        } 
-      }
-      @keyframes coffee {
-        100% {
-          opacity: 0;
-          -webkit-transform: translateY(-200%);
-                  transform: translateY(-200%); 
-        } 
-      }
+    }
 
-      @keyframes load1 {
-        0% {
-          bottom: 0;
-          height: 0;
-        }
-        100% {
-          bottom: 0;
-          height: 100%;
-        }
+    @keyframes coffee {
+      100% {
+        opacity: 0;
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
       }
+    }
 
-      @keyframes load2 {
-        0% {
-          top: 0;
-          height: 0;
-        }
-        100% {
-          top: 0;
-          height: 100%;
-        }
-      }
-
-      @keyframes load3 {
-        0% {
-          top: 0;
-          height: 0;
-        }
-        100% {
-          top: 0;
-          height: 100%;
-        }
-      }
-
-      @keyframes load4 {
-        0% {
-          top: 0;
-          height: 0;
-        }
-        100% {
-          top: 0;
-          height: 100%;
-        }
-      }
-
-      @keyframes load5 {
-        0% {
-          bottom: 0;
-          height: 0;
-        }
-        100% {
-          bottom: 0;
-          height: 100%;
-        }
-      }
-
-      @keyframes load6 {
-        0% {
-          bottom: 0;
-          height: 0;
-        }
-        100% {
-          bottom: 0;
-          height: 100%;
-        }
-      }
-      @keyframes showlogo {
-        to {
-          opacity: 1;
-          font-size: 1.6em;
-        }
-      }
-      /* animation ends here  */
-
-      /* toggleing switch  */
-      .togglerClass{
-        position: relative;
-        float: right;
-        right:0px;
-        top:20px;
-      }
-      .toggler{
-        float: left;
-      }
-      .togglerClass p{
-        float: left;
-        margin:20px 10px;
-        color:white;
-        font-size: 20px;
-      }
-      input[type="checkbox"] {
+    @keyframes load1 {
+      0% {
+        bottom: 0;
         height: 0;
-        width: 0;
-        visibility: hidden;
       }
-      label {
-        cursor: pointer;
-        text-indent: -9999px;
-        width: 53px;
-        height: 26px;
-        background: grey;
-        display: block;
-        border-radius: 100px;
-        position: relative;
-        z-index: 1;
-        transition: all .2s ease-in-out;
-      }
-      label:after {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 20px;
-        height: 20px;
-        background: #fff;
-        border-radius: 90px;
-        transition: 0.3s;
-      }
-      input:checked + label {
-        background: #bada55;
-      }
-      input:checked + label:after {
-        left: calc(100% - 5px);
-        transform: translateX(-100%);
-      }
-      label:active:after {
-        width: 35px;
-      }
-      /* toggling swithh ends here */
 
-      a:focus{
-        outline: none;
+      100% {
+        bottom: 0;
+        height: 100%;
       }
-      ::selection{
-          background-color: rgba(255, 207, 103, 0.781);
+    }
+
+    @keyframes load2 {
+      0% {
+        top: 0;
+        height: 0;
       }
-      .bttomleftContainer {
-        opacity:0;
-        /* display:none; */
-        position: fixed;
-        bottom: 0px;
-        left: 60px;
-        z-index: 10;
-        transition: all .4s ease-in-out;
+
+      100% {
+        top: 0;
+        height: 100%;
       }
-      .bttomleftContainer .con {
-        width: 40px;
-        height: 40px;
-        margin: 15px 0px;
+    }
+
+    @keyframes load3 {
+      0% {
+        top: 0;
+        height: 0;
       }
-      .bttomleftContainer img {
-        width: 30px;
-        height: 30px;
-        transition: all 0.2s ease-in-out;
+
+      100% {
+        top: 0;
+        height: 100%;
       }
-      .bttomleftContainer img:hover {
-        width: 37px;
-        height: 37px;
+    }
+
+    @keyframes load4 {
+      0% {
+        top: 0;
+        height: 0;
       }
+
+      100% {
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    @keyframes load5 {
+      0% {
+        bottom: 0;
+        height: 0;
+      }
+
+      100% {
+        bottom: 0;
+        height: 100%;
+      }
+    }
+
+    @keyframes load6 {
+      0% {
+        bottom: 0;
+        height: 0;
+      }
+
+      100% {
+        bottom: 0;
+        height: 100%;
+      }
+    }
+
+    @keyframes showlogo {
+      to {
+        opacity: 1;
+        font-size: 1.6em;
+      }
+    }
+
+    /* animation ends here  */
+
+    /* toggleing switch  */
+    .togglerClass {
+      position: relative;
+      float: right;
+      right: 0px;
+      top: 20px;
+    }
+
+    .toggler {
+      float: left;
+    }
+
+    .togglerClass p {
+      float: left;
+      margin: 20px 10px;
+      color: white;
+      font-size: 20px;
+    }
+
+    input[type="checkbox"] {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+
+    label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 53px;
+      height: 26px;
+      background: grey;
+      display: block;
+      border-radius: 100px;
+      position: relative;
+      z-index: 1;
+      transition: all .2s ease-in-out;
+    }
+
+    label:after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 90px;
+      transition: 0.3s;
+    }
+
+    input:checked+label {
+      background: #bada55;
+    }
+
+    input:checked+label:after {
+      left: calc(100% - 5px);
+      transform: translateX(-100%);
+    }
+
+    label:active:after {
+      width: 35px;
+    }
+
+    /* toggling swithh ends here */
+
+    a:focus {
+      outline: none;
+    }
+
+    ::selection {
+      background-color: rgba(255, 207, 103, 0.781);
+    }
+
+    .bttomleftContainer {
+      opacity: 0;
+      /* display:none; */
+      position: fixed;
+      bottom: 0px;
+      left: 60px;
+      z-index: 10;
+      transition: all .4s ease-in-out;
+    }
+
+    .bttomleftContainer .con {
+      width: 40px;
+      height: 40px;
+      margin: 15px 0px;
+    }
+
+    .bttomleftContainer img {
+      width: 30px;
+      height: 30px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .bttomleftContainer img:hover {
+      width: 37px;
+      height: 37px;
+    }
+
+    .bttomrightContainer {
+      opacity: 0;
+      /* display: none; */
+      position: fixed;
+      width: 24px;
+      bottom: 0px;
+      right: 60px;
+      z-index: 10;
+      transition: all .4s ease-in-out;
+    }
+
+    .bttomrightContainer a {
+      writing-mode: vertical-rl;
+      margin: 5px;
+      text-decoration: none;
+      color: white;
+      font-family: sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .bttomrightContainer a:hover {
+      letter-spacing: 2px;
+    }
+
+    .line {
+      width: 2px;
+      height: 100px;
+      background-color: white;
+    }
+
+    .bodycontainer {
+      opacity: 0;
+      /* display: none; */
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 95vw;
+      transition: all .4s ease-in-out;
+      /* height: 200vh; */
+      /* background-color: greenyellow; */
+    }
+
+    .blockcontainer {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      margin-bottom: 30px;
+      /* background-color: wheat; */
+    }
+
+    .blockcontainer .centerbox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      /* background-color: honeydew; */
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .size1 {
+      width: 600px;
+    }
+
+    .size2 {
+      width: 400px;
+    }
+
+    .mobileimage {
+      display: none;
+    }
+
+    .centerbox .content {
+      position: relative;
+      /* width: 500px; */
+      margin-left: 40px;
+      /* float: left; */
+      /* background-color: gray; */
+    }
+
+    h3 {
+      font-family: 'Caveat', cursive;
+      /* font-family: "Pacifico", cursive; */
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: rgba(255, 255, 255, 0.803);
+    }
+
+    .shake {
+      display: inline-block;
+      animation: shakeit 10.5s infinite ease-in-out;
+    }
+
+    @keyframes shakeit {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      8% {
+        transform: rotate(-30deg);
+      }
+
+      14% {
+        transform: rotate(7deg);
+      }
+
+      20% {
+        transform: rotate(-23deg);
+      }
+
+      24% {
+        transform: rotate(2deg);
+      }
+
+      27% {
+        transform: rotate(-7deg);
+      }
+
+      28.5% {
+        transform: rotate(0deg);
+      }
+    }
+
+    h1 {
+      text-align: justify;
+      font-family: "Sniglet", cursive;
+      font-size: 35px;
+      line-height: 53px;
+      color: rgba(255, 255, 255, 0.851);
+    }
+
+    p {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 16px;
+      line-height: 27px;
+      color: rgba(255, 255, 255, 0.529);
+      text-align: justify;
+    }
+
+    .bodycontainer .content a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .bodycontainer .content a:hover {
+      color: white;
+      background-color: rgb(114, 94, 245);
+    }
+
+    .content img {
+      top: 180px;
+      left: 50px;
+      position: absolute;
+      width: 80%;
+      height: auto;
+      /* color:#f0f1ffa9 */
+    }
+
+    /* project part starts here  */
+    .projectcontainer {
+      opacity: 0;
+      transition: all .4s ease-in-out;
+    }
+
+    .headings {
+      display: inline-block;
+      font-family: "Sniglet", cursive;
+      letter-spacing: 1.8px;
+      font-size: 27px;
+      margin-bottom: 70px;
+      color: rgba(255, 255, 255, 0.851);
+    }
+
+    .headings div {
+      position: relative;
+      bottom: 5px;
+      background-color: rgba(255, 99, 71, 0.831);
+      height: 6px;
+      border-radius: 20px;
+      transform: rotate(-3deg);
+      z-index: -1;
+    }
+
+    .projectTimeline {
+      position: relative;
+      width: 90%;
+      height: 500px;
+      /* background-color: aqua; */
+      margin: auto;
+    }
+
+    .projectTimeline .Half {
+      margin-left: 2%;
+      color: black;
+      width: 45%;
+      height: 95%;
+      position: relative;
+      float: left;
+      /* background-color: white; */
+    }
+
+    .projectTimeline .Half a {
+      color: white;
+      border: none;
+      text-decoration: none;
+      font-family: 'Varela Round';
+      font-style: italic;
+      font-size: 18px;
+    }
+
+    .projectTimeline .Half h4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      font-family: "Sniglet", cursive;
+      color: rgba(255, 255, 255, 0.851);
+      font-size: 100;
+      line-height: 180%;
+    }
+
+    .projectTimeline .Half img {
+      /* height : 400px; */
+      position: relative;
+      width: 28%;
+
+    }
+
+    .projectTimeline .Half .ImageOne {
+      width: 33%;
+      left: 4%;
+      top: -10px;
+      position: relative;
+    }
+
+    .projectTimeline .Half .ImageTwo {
+      width: 33%;
+      left: -6%;
+      top: -10px;
+      position: relative;
+      z-index: 0;
+    }
+
+    .horizontalscroller {
+      position: relative;
+      /* width: 100%; */
+      min-height: 600px;
+      padding-left: 130px;
+      /* padding-right: 100px; */
+      display: flex;
+      flex-wrap: no-wrap;
+      overflow-x: scroll;
+    }
+
+    .contentbox {
+      flex: 0 0 auto;
+      position: relative;
+      margin-top: 70px;
+      margin-bottom: 70px;
+      margin-left: -60px;
+      display: inline-block;
+      padding: 30px;
+      width: 253px;
+      height: 353px;
+      background-color: rgb(21, 19, 27);
+      /* background-color: rgb(248,248,255); */
+      box-shadow: rgba(0, 0, 0, 0.646) -30px 10px 50px,
+        rgba(0, 0, 0, 0.468) 30px 10px 50px;
+      border-radius: 10px;
+      z-index: 5;
+      transition: all 0.5s ease-out;
+    }
+
+    .contentbox:hover {
+      margin-right: 20px;
+      z-index: 6;
+    }
+
+    .contentbox img {
+      width: 50px;
+      height: 50px;
+      opacity: 0.9;
+    }
+
+    .contentbox p {
+      text-align: left;
+      height: 190px;
+      color: rgba(255, 255, 255, 0.529);
+      /* color: rgba(0, 0, 0, 0.712); */
+      overflow: hidden;
+    }
+
+    .contentbox h2 {
+      font-family: "Varela Round", sans-serif;
+      font-size: 20px;
+      line-height: 23px;
+      color: white;
+      /* color: black; */
+
+    }
+
+    .contentbox h6 {
+      position: absolute;
+      bottom: 0px;
+      color: rgb(222, 220, 220);
+      /* color: rgba(0, 0, 0, 0.712); */
+      font-family: "Varela Round", sans-serif;
+      font-size: 11px;
+      border: solid 2px rgba(255, 255, 255, 0.201);
+      /* border:solid 2px rgba(0, 0, 0, 0.297); */
+      border-radius: 30px;
+      padding: 10px;
+    }
+
+    .footer {
+      opacity: 0;
+      /* display: none; */
+      width: 100%;
+      height: auto;
+      position: relative;
+      transition: all .4s ease-in-out;
+    }
+
+    .footer svg {
+      position: relative;
+      bottom: -15px;
+    }
+
+    .footer .footerunderground {
+      position: relative;
+      height: 100px;
+      width: 100%;
+      background-color: #000000;
+      font-family: 'Varela Round', sans-serif;
+      font-size: 13px;
+      /* color: rgba(0, 0, 0, 0.712); */
+      color: rgba(255, 255, 255, 0.529);
+    }
+
+    .footercon {
+      display: none;
+    }
+
+    .footerunderground a {
+      display: none;
+    }
+
+    .design {
+      margin-top: -5px;
+      line-height: 19px;
+    }
+
+    @media (max-width:1000px) {
+
+      .bttomleftContainer,
       .bttomrightContainer {
-        opacity:0;
-        /* display: none; */
-        position: fixed;
-        width:24px;
-        bottom: 0px;
-        right: 60px;
-        z-index: 10;
-        transition: all .4s ease-in-out;
-      }
-      .bttomrightContainer a {
-        writing-mode: vertical-rl;
-        margin: 5px;
-        text-decoration: none;
-        color: white;
-        font-family: sans-serif;
-        font-size: 14px;
-        letter-spacing: 1px;
-        transition: all 0.2s ease-in-out;
-      }
-      .bttomrightContainer a:hover {
-        letter-spacing: 2px;
-      }
-      .line {
-        width: 2px;
-        height: 100px;
-        background-color: white;
-      }
-      .bodycontainer {
-        opacity:0;
-        /* display: none; */
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 95vw;
-        transition: all .4s ease-in-out;
-        /* height: 200vh; */
-        /* background-color: greenyellow; */
-      }
-      .blockcontainer {
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        margin-bottom: 30px;
-        /* background-color: wheat; */
-      }
-      .blockcontainer .centerbox {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        /* background-color: honeydew; */
-        display: flex;
-        align-content: center;
-        justify-content: center;
-      }
-      .size1{
-        width:600px;
-      }
-      .size2{
-        width:400px;
-      }
-      .mobileimage{
         display: none;
       }
+
+      .togglerClass p {
+        float: left;
+        margin: 23px 10px;
+        color: white;
+        font-size: 20px;
+      }
+
+      .mobileimage {
+        display: block;
+        position: relative;
+        left: 5%;
+      }
+
+      .size1 {
+        width: 100%;
+      }
+
+      .size2 {
+        display: none;
+      }
+
+      .blockcontainer .centerbox {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+      }
+
       .centerbox .content {
         position: relative;
-        /* width: 500px; */
-        margin-left: 40px;
-        /* float: left; */
-        /* background-color: gray; */
+        width: 90%;
+        margin: 20px;
       }
+
+      .content img {
+        top: 34px;
+        left: 40px;
+        position: absolute;
+        width: 65%;
+        height: auto;
+      }
+
       h3 {
         font-family: 'Caveat', cursive;
-        /* font-family: "Pacifico", cursive; */
-        font-size: 28px;
+        font-size: 21px;
         font-weight: 700;
-        letter-spacing: 1.2px;
-        color: rgba(255, 255, 255, 0.803);
       }
-      .shake{
-        display: inline-block;
-        animation: shakeit 10.5s infinite ease-in-out;  
-      }
-      @keyframes shakeit{
-        0% { transform: rotate(0deg); }
-        8% { transform:rotate(-30deg); }
-        14% { transform: rotate(7deg); }
-        20% { transform:rotate(-23deg); }
-        24% { transform: rotate(2deg); }
-        27% { transform:rotate(-7deg); }
-        28.5% { transform: rotate(0deg); }
-      }
+
       h1 {
-        text-align: justify;
+        text-align: left;
         font-family: "Sniglet", cursive;
-        font-size: 35px;
-        line-height: 53px;
-        color:rgba(255, 255, 255, 0.851);
+        font-size: 22px;
+        line-height: 30px;
       }
+
       p {
         font-family: 'Varela Round', sans-serif;
-        font-size: 16px;
-        line-height: 27px;
-        color: rgba(255, 255, 255, 0.529);
+        font-size: 13px;
+        line-height: 20px;
         text-align: justify;
       }
-      .bodycontainer .content a{
-          color:inherit;
-          text-decoration: none;
-      }
-      .bodycontainer .content a:hover{
-          color:white;
-            background-color: rgb(114, 94, 245);
-      }
-      .content img{
-          top:180px;
-          left:50px;
-          position: absolute;
-          width:80%;
-          height: auto;
-          /* color:#f0f1ffa9 */
+
+      .headings {
+        margin-top: 20px;
+        font-size: 23px;
+        margin-bottom: 30px;
       }
 
-      /* project part starts here  */
-      .projectcontainer{
-        opacity: 0;
-        transition: all .4s ease-in-out;
-      }
-      .headings{
-        display: inline-block;
-        font-family: "Sniglet", cursive;
-        letter-spacing: 1.8px;
-        font-size: 27px;
-        margin-bottom: 70px;
-        color:rgba(255, 255, 255, 0.851);
-      }
-      .headings div{
-        position: relative;
-        bottom:5px;
-        background-color: rgba(255, 99, 71, 0.831);
-        height: 6px;
-        border-radius: 20px;
-        transform: rotate(-3deg);
-        z-index: -1;
-      }
-
-      .projectTimeline{
+      .projectTimeline {
         position: relative;
         width: 90%;
-        height : 500px;
-        /* background-color: aqua; */
+        height: 650px;
+        /* background-color: blue; */
         margin: auto;
       }
-      .projectTimeline .Half{
+
+      .projectTimeline .Half {
         margin-left: 2%;
         color: black;
-        width: 45%;
-        height: 95%;
+        width: 90%;
+        height: 49%;
         position: relative;
         float: left;
         /* background-color: white; */
       }
-      .projectTimeline .Half a{
-        color: white;
-        border: none;
-        text-decoration: none;
-        font-family: 'Varela Round';
-        font-style: italic;
-        font-size: 18px;
-      }
-      .projectTimeline .Half h4{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: justify;
-        font-family: "Sniglet", cursive;
-        color: rgba(255, 255, 255, 0.851);
-        font-size: 100;
-        line-height: 180%;
-      }
-      .projectTimeline .Half img{
-        /* height : 400px; */
-        position: relative;
-        width : 28%;
 
-      }
-      .projectTimeline .Half .ImageOne{
-        width: 33%;
-        left: 4%;
-        top: -10px;
-        position: relative;
-      }
-
-      .projectTimeline .Half .ImageTwo{
-        width: 33%;
-        left: -6%;
-        top: -10px;
-        position: relative;
-        z-index: 0;
-      }
-      
-      .horizontalscroller {
-        position: relative;
-        /* width: 100%; */
-        min-height: 600px;
-        padding-left: 130px;
-        /* padding-right: 100px; */
-        display: flex;
-        flex-wrap: no-wrap;
-        overflow-x: scroll; 
-      }
-      .contentbox {
-        flex: 0 0 auto;
-        position: relative;
-        margin-top: 70px;
-        margin-bottom: 70px;
-        margin-left: -60px;
-        display: inline-block;
-        padding: 30px;
-        width: 253px;
-        height: 353px;
-        background-color: rgb(21, 19, 27);
-        /* background-color: rgb(248,248,255); */
-        box-shadow: rgba(0, 0, 0, 0.646) -30px 10px 50px,
-          rgba(0, 0, 0, 0.468) 30px 10px 50px;
-        border-radius: 10px;
-        z-index: 5;
-        transition: all 0.5s ease-out;
-      }
-      .contentbox:hover {
-        margin-right: 20px;
-        z-index: 6;
-      }
-      .contentbox img {
-        width: 50px;
-        height: 50px;
-        opacity: 0.9;
-      }
-      .contentbox p {
-        text-align: left;
-        height: 190px;
-        color: rgba(255, 255, 255, 0.529);
-        /* color: rgba(0, 0, 0, 0.712); */
-        overflow: hidden;
-      }
-      .contentbox h2 {
-        font-family: "Varela Round", sans-serif;
-        font-size: 20px;
-        line-height: 23px;
-        color: white;
-        /* color: black; */
-
-      }
-      .contentbox h6 {
-        position: absolute;
-        bottom: 0px;
-        color: rgb(222, 220, 220);
-        /* color: rgba(0, 0, 0, 0.712); */
-        font-family: "Varela Round", sans-serif;
-        font-size: 11px;
-        border:solid 2px rgba(255, 255, 255, 0.201);
-        /* border:solid 2px rgba(0, 0, 0, 0.297); */
-        border-radius: 30px;
-        padding: 10px;
-      }
-      .footer{
-        opacity:0;
-        /* display: none; */
-        width:100%;
-        height: auto;
-        position: relative;
-        transition: all .4s ease-in-out;
-      }
-      .footer svg{
-        position: relative;
-        bottom: -15px;
-      }
-      .footer .footerunderground{
-        position: relative;
-        height: 100px;
-        width: 100%;
-        background-color: #000000;
-        font-family: 'Varela Round', sans-serif;
-        font-size: 13px;
-        /* color: rgba(0, 0, 0, 0.712); */
-        color:rgba(255, 255, 255, 0.529);
-      }
-      .footercon{
-        display: none;
-      }
-      .footerunderground a{
-        display:none;
-      }
-      .design{
-          margin-top: -5px;
-          line-height: 19px;
-      }
-    
-      @media (max-width:1000px){
-
-        .bttomleftContainer, .bttomrightContainer{
-          display: none;
-        }
-        .togglerClass p{
-          float: left;
-          margin:23px 10px;
-          color:white;
-          font-size: 20px;
-        }
-        .mobileimage{
-          display: block;
-          position: relative;
-          left:5%;
-        }
-        .size1{
-          width: 100%;
-        }
-        .size2{
-          display: none;
-        }
-        .blockcontainer .centerbox {
-          position: relative;
-          left:0;
-          top:0;
-          transform:none;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-
-        }
-        .centerbox .content {
-          position: relative;
-          width: 90%;
-          margin: 20px;
-        }
-        .content img{
-          top:34px;
-          left:40px;
-          position: absolute;
-          width:65%;
-          height: auto;
-        }
-        h3 {
-          font-family: 'Caveat', cursive;
-          font-size: 21px;
-          font-weight: 700;
-        }
-        h1 {
-          text-align: left;
-          font-family: "Sniglet", cursive;
-          font-size: 22px;
-          line-height: 30px;
-        }
-        p {
-          font-family: 'Varela Round', sans-serif;
-          font-size: 13px;
-          line-height: 20px;
-          text-align: justify;
-        }
-        .headings{
-          margin-top: 20px;
-          font-size: 23px;
-          margin-bottom: 30px;
-        }
-        .projectTimeline{
-          position: relative;
-          width: 90%;
-          height : 650px;
-          /* background-color: blue; */
-          margin: auto;
-      }
-        .projectTimeline .Half{
-          margin-left: 2%;
-          color: black;
-          width: 90%;
-          height: 49%;
-          position: relative;
-          float: left;
-          /* background-color: white; */
-      }
-      .projectTimeline .Half h4{
+      .projectTimeline .Half h4 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -733,7 +840,8 @@
         font-size: 15px;
         line-height: 20px;
       }
-      .projectTimeline .Half a{
+
+      .projectTimeline .Half a {
         color: white;
         border: none;
         text-decoration: none;
@@ -741,518 +849,570 @@
         font-style: italic;
         font-size: 14px;
       }
-      .projectTimeline .Half img{
+
+      .projectTimeline .Half img {
         position: relative;
-        width : 30%;
+        width: 30%;
         margin-top: 13%;
       }
-      .projectTimeline .Half .ImageOne{
+
+      .projectTimeline .Half .ImageOne {
         width: 33%;
         left: 4%;
         top: -10px;
         position: relative;
       }
 
-      .projectTimeline .Half .ImageTwo{
+      .projectTimeline .Half .ImageTwo {
         width: 33%;
         left: -6%;
         top: -10px;
         position: relative;
         z-index: 0;
       }
-      
-      .footer .footerunderground{
+
+      .footer .footerunderground {
         font-size: 9px;
       }
-      .footercon{
+
+      .footercon {
         display: block;
-        width:15px;
-        height:15px;
+        width: 15px;
+        height: 15px;
         /* float: left; */
         display: inline-block;
-        margin:8px 6px;
+        margin: 8px 6px;
       }
-      .footercon img{
-        width:15px;
-        height:15px;
+
+      .footercon img {
+        width: 15px;
+        height: 15px;
       }
-      .footerunderground a{
+
+      .footerunderground a {
         display: block;
         text-decoration: none;
-        color:rgba(255, 255, 255, 0.529);
+        color: rgba(255, 255, 255, 0.529);
         /* font-size: 7px; */
       }
-      .design{
+
+      .design {
         margin-top: -5px;
         line-height: 14px;
       }
-      
+
+    }
+  </style>
+
+  <script>
+    var jsdata
+    ligthMode = false;
+
+    //black
+    blackBackgroundColor = "background-color: rgb(13,12,18);";
+    whiteBottomLineColor = "background-color: white;";
+    whiteEmail = "color:white";
+    whiteH3 = "color: rgba(255, 255, 255, 0.803);";
+    whiteH1 = "color:rgba(255, 255, 255, 0.851);";
+    whiteP = "color: rgba(255, 255, 255, 0.529);";
+    whiteProjectsHeading = "color:rgba(255, 255, 255, 0.851);";
+    blackContentBox = "background-color: rgb(21, 19, 27);";
+    whiteFolderImage = "assets/konWhite.png";
+    whiteContentHeading = "color:rgba(255, 255, 255, 0.851)";
+    whiteContentp = "color: rgba(255, 255, 255, 0.529);";
+    whiteContentH6 = "color:rgb(222, 220, 220);solid 2px rgba(255, 255, 255, 0.201);";
+    footerp = "color: rgba(255, 255, 255, 0.529)";
+    blackfooterBackground = "background-color:#000000;" + whiteP;
+
+
+    //white
+    whiteBcakgroundColor = "background-color: white;"
+    blackBottomLineColor = "background-color: black;";
+    blackEmail = "color:black";
+    blackH3 = "color: rgba(0, 0, 0, 0.657);";
+    blackH1 = "color:black;";
+    blackP = "color: rgba(0, 0, 0, 0.712);";
+    blackProjectsHeading = "color:black";
+    whiteContentBox = "background-color: rgb(248,248,255);";
+    blackFolderImage = "assets/konBlack.png";
+    blackContentHeading = "color:black;";
+    blackContentp = "color: rgba(0, 0, 0, 0.712)";
+    blackContentH6 = "color:rgba(0, 0, 0, 0.712);border:solid 2px rgba(0, 0, 0, 0.297);";
+    whitefooterBackground = "background-color:#F0F1FF;" + blackP;
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    </style>
+    window.addEventListener('load', async function () {
 
-    <script>
-      var jsdata
-      ligthMode=false;
+      document.getElementById("bdycont").style.cssText = "display:none";
+      document.getElementById("btmleft").style.cssText = "display:none";
+      document.getElementById("btmright").style.cssText = "display:none";
+      document.getElementById("ftr").style.cssText = "display:none";
+      document.getElementById("projectContainer").style.cssText = "display:none";
 
-      //black
-      blackBackgroundColor="background-color: rgb(13,12,18);";
-      whiteBottomLineColor="background-color: white;";
-      whiteEmail="color:white";
-      whiteH3="color: rgba(255, 255, 255, 0.803);";
-      whiteH1="color:rgba(255, 255, 255, 0.851);";
-      whiteP="color: rgba(255, 255, 255, 0.529);";
-      whiteProjectsHeading="color:rgba(255, 255, 255, 0.851);";
-      blackContentBox="background-color: rgb(21, 19, 27);";
-      whiteFolderImage="assets/konWhite.png";
-      whiteContentHeading="color:rgba(255, 255, 255, 0.851)";
-      whiteContentp="color: rgba(255, 255, 255, 0.529);";
-      whiteContentH6="color:rgb(222, 220, 220);solid 2px rgba(255, 255, 255, 0.201);";
-      footerp="color: rgba(255, 255, 255, 0.529)";
-      blackfooterBackground="background-color:#000000;"+whiteP;
+      //test for slide up animation
+      document.getElementsByClassName("size1")[0].children[0].style.cssText = "opacity: 0;transform: translate(0px,10px)"
+      document.getElementsByClassName("size1")[0].children[1].style.cssText = "opacity: 0;transform: translate(0px,20px)"
+      document.getElementsByClassName("size1")[0].children[2].style.cssText = "opacity: 0;transform: translate(0px,30px)"
+      document.getElementsByClassName("size2")[0].style.cssText = "opacity: 0;transform: translate(20px,0px)"
+      document.getElementsByClassName("mobileimage")[0].style.cssText = "opacity: 0;transform: translate(0px,-10px)"
 
+      await sleep(3000); // 4seconds sleep
+      document.getElementById("ani").style.cssText = "opacity: 0;";
+      document.getElementById("bdycont").style.cssText = "display:block";
+      document.getElementById("btmleft").style.cssText = "display:block";
+      document.getElementById("btmright").style.cssText = "display:block";
+      document.getElementById("ftr").style.cssText = "display:block";
+      document.getElementById("projectContainer").style.cssText = "display:block";
 
-      //white
-      whiteBcakgroundColor="background-color: white;"
-      blackBottomLineColor="background-color: black;";
-      blackEmail="color:black";
-      blackH3="color: rgba(0, 0, 0, 0.657);";
-      blackH1="color:black;";
-      blackP="color: rgba(0, 0, 0, 0.712);";
-      blackProjectsHeading="color:black";
-      whiteContentBox="background-color: rgb(248,248,255);";
-      blackFolderImage="assets/konBlack.png";
-      blackContentHeading="color:black;";
-      blackContentp="color: rgba(0, 0, 0, 0.712)";
-      blackContentH6="color:rgba(0, 0, 0, 0.712);border:solid 2px rgba(0, 0, 0, 0.297);";
-      whitefooterBackground="background-color:#F0F1FF;"+blackP;
+      await sleep(600) // .5 seconds sleep
+      document.getElementById("ani").style.cssText = "display: none;";
 
-      function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
+      document.getElementById("bdycont").style.cssText = "opacity: 1";
 
-      window.addEventListener('load', async function() {
-  
-          document.getElementById("bdycont").style.cssText = "display:none";
-          document.getElementById("btmleft").style.cssText = "display:none";
-          document.getElementById("btmright").style.cssText = "display:none";
-          document.getElementById("ftr").style.cssText = "display:none";
-          document.getElementById("projectContainer").style.cssText = "display:none";
-          
-          //test for slide up animation
-          document.getElementsByClassName("size1")[0].children[0].style.cssText="opacity: 0;transform: translate(0px,10px)"
-          document.getElementsByClassName("size1")[0].children[1].style.cssText="opacity: 0;transform: translate(0px,20px)"
-          document.getElementsByClassName("size1")[0].children[2].style.cssText="opacity: 0;transform: translate(0px,30px)"
-          document.getElementsByClassName("size2")[0].style.cssText="opacity: 0;transform: translate(20px,0px)"
-          document.getElementsByClassName("mobileimage")[0].style.cssText="opacity: 0;transform: translate(0px,-10px)"
+      //slight pop up animation
+      document.getElementsByClassName("mobileimage")[0].style.cssText = "opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .6s;";
+      document.getElementsByClassName("size1")[0].children[0].style.cssText = "opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .3s;";
+      document.getElementsByClassName("size1")[0].children[1].style.cssText = "opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .4s";
+      document.getElementsByClassName("size1")[0].children[2].style.cssText = "opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .5s";
+      document.getElementsByClassName("size2")[0].style.cssText = "opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .5s"
 
-          await sleep(3000); // 4seconds sleep
-			    document.getElementById("ani").style.cssText = "opacity: 0;";
-          document.getElementById("bdycont").style.cssText = "display:block";
-          document.getElementById("btmleft").style.cssText = "display:block";
-          document.getElementById("btmright").style.cssText = "display:block";
-          document.getElementById("ftr").style.cssText = "display:block";
-          document.getElementById("projectContainer").style.cssText = "display:block";
+      await sleep(1000)
+      document.getElementById("btmleft").style.cssText = "opacity: 1";
+      document.getElementById("btmright").style.cssText = "opacity: 1";
+      document.getElementById("projectContainer").style.cssText = "opacity: 1";
+      document.getElementById("ftr").style.cssText = "opacity: 1";
 
-          await sleep(600) // .5 seconds sleep
-          document.getElementById("ani").style.cssText = "display: none;";
+    });
 
-          document.getElementById("bdycont").style.cssText = "opacity: 1";
-          
-          //slight pop up animation
-          document.getElementsByClassName("mobileimage")[0].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .6s;";
-          document.getElementsByClassName("size1")[0].children[0].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .3s;";
-          document.getElementsByClassName("size1")[0].children[1].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .4s";
-          document.getElementsByClassName("size1")[0].children[2].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .5s";
-          document.getElementsByClassName("size2")[0].style.cssText="opacity: 1;transform: translate(0px,0px);transition: ease-in .3s all .5s"
+    // function liveViews(response) {
+    // document.getElementById('visits').innerText = response.value + " 👀";
+    // console.log(response.value)
+    // }
 
-          await sleep(1000)
-          document.getElementById("btmleft").style.cssText = "opacity: 1";
-          document.getElementById("btmright").style.cssText = "opacity: 1";
-          document.getElementById("projectContainer").style.cssText = "opacity: 1";
-          document.getElementById("ftr").style.cssText = "opacity: 1";
+    function toggle() {
+      body = document.querySelector("body");
+      line0 = document.getElementById("firstLine");
+      line2 = document.getElementById("secondLine");
+      email = document.getElementById("emailid")
+      h3 = document.querySelector("h3")
+      h1 = document.querySelector("h1")
+      firstP = line1 = document.getElementById("firstP")
+      projectHeading = document.getElementsByClassName("headings")[0]
+      projectHeading1 = document.getElementsByClassName("headings")[1]
+      contentBox = document.getElementsByClassName("contentbox")
+      contentImage = document.getElementsByClassName("contentImage");
+      footerBackground = document.getElementsByClassName('footerunderground')[0]
 
-		  });
-
-      function liveViews(response) {
-        document.getElementById('visits').innerText = response.value + " 👀";
-        // console.log(response.value)
-      }
-
-      function toggle(){
-        body=document.querySelector("body");
-        line0=document.getElementById("firstLine");
-        line2=document.getElementById("secondLine");
-        email=document.getElementById("emailid")
-        h3=document.querySelector("h3")
-        h1=document.querySelector("h1")
-        firstP=line1=document.getElementById("firstP")
-        projectHeading=document.getElementsByClassName("headings")[0]
-        projectHeading1=document.getElementsByClassName("headings")[1]
-        contentBox=document.getElementsByClassName("contentbox")
-        contentImage=document.getElementsByClassName("contentImage");
-        footerBackground=document.getElementsByClassName('footerunderground')[0]
-      
-        if (ligthMode){ // enabling dark mode
-          ligthMode=false;
-          body.style.cssText=blackBackgroundColor;
-          line0.style.cssText=whiteBottomLineColor;
-          line2.style.cssText=whiteBottomLineColor;
-          email.style.cssText=whiteEmail;
-          h3.style.cssText=whiteH3;
-          h1.style.cssText=whiteH1;
-          firstP.style.cssText=whiteP;
-          projectHeading.style.cssText=whiteProjectsHeading;
-          projectHeading1.style.cssText=whiteProjectsHeading;
-          for(p=0;p<contentBox.length;p++){
-            contentBox[p].style.cssText=blackContentBox;
-            contentImage[p].setAttribute("src",whiteFolderImage);
-            document.getElementsByClassName("contentbox")[p].children[1].style.cssText=whiteContentHeading;
-            document.getElementsByClassName("contentbox")[p].children[2].style.cssText=whiteContentp;
-            document.getElementsByClassName("contentbox")[p].children[3].style.cssText=whiteContentH6;
-          }
-          document.getElementById('footerSvg').style.fill="#000000";
-          footerBackground.style.cssText=blackfooterBackground;
-          document.getElementsByClassName("Half")[0].children[0].style.cssText = whiteContentp
-          document.getElementsByClassName("Half")[0].children[1].style.cssText = whiteContentp
-          document.getElementsByClassName("Half")[0].children[2].style.cssText = whiteContentp
-
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src="assets/githubwhite.png";
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src="assets/instagramwhite.png";
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src="assets/linkedinwhite.png";
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[3].children[0].children[0].src="assets/twitterwhite.png";
-
-          //mobile footer images
-          document.getElementsByClassName("footercon")[0].children[0].children[0].src="assets/githubwhite.png";
-          document.getElementsByClassName("footercon")[1].children[0].children[0].src="assets/instagramwhite.png";
-          document.getElementsByClassName("footercon")[2].children[0].children[0].src="assets/linkedinwhite.png";
-          document.getElementsByClassName("footercon")[3].children[0].children[0].src="assets/twitterwhite.png";
-
-          document.getElementsByClassName("footerunderground")[0].children[0].children[5].style.cssText=whiteP
-
-
-          
+      if (ligthMode) { // enabling dark mode
+        ligthMode = false;
+        body.style.cssText = blackBackgroundColor;
+        line0.style.cssText = whiteBottomLineColor;
+        line2.style.cssText = whiteBottomLineColor;
+        email.style.cssText = whiteEmail;
+        h3.style.cssText = whiteH3;
+        h1.style.cssText = whiteH1;
+        firstP.style.cssText = whiteP;
+        projectHeading.style.cssText = whiteProjectsHeading;
+        projectHeading1.style.cssText = whiteProjectsHeading;
+        for (p = 0; p < contentBox.length; p++) {
+          contentBox[p].style.cssText = blackContentBox;
+          contentImage[p].setAttribute("src", whiteFolderImage);
+          document.getElementsByClassName("contentbox")[p].children[1].style.cssText = whiteContentHeading;
+          document.getElementsByClassName("contentbox")[p].children[2].style.cssText = whiteContentp;
+          document.getElementsByClassName("contentbox")[p].children[3].style.cssText = whiteContentH6;
         }
-        else{ // enabling light mode
-          ligthMode=true;
-          body.style.cssText=whiteBcakgroundColor;
-          line0.style.cssText=blackBottomLineColor;
-          line2.style.cssText=blackBottomLineColor;
-          email.style.cssText=blackEmail;
-          h3.style.cssText=blackH3;
-          h1.style.cssText=blackH1;
-          firstP.style.cssText=blackP;
-          projectHeading.style.cssText=blackProjectsHeading;
-          projectHeading1.style.cssText=blackProjectsHeading;
-          for(p=0;p<contentBox.length;p++){
-            contentBox[p].style.cssText=whiteContentBox;
-            contentImage[p].setAttribute("src",blackFolderImage);
-            document.getElementsByClassName("contentbox")[p].children[1].style.cssText=blackContentHeading;
-            document.getElementsByClassName("contentbox")[p].children[2].style.cssText=blackContentp;
-            document.getElementsByClassName("contentbox")[p].children[3].style.cssText=blackContentH6;
-          }
+        document.getElementById('footerSvg').style.fill = "#000000";
+        footerBackground.style.cssText = blackfooterBackground;
+        document.getElementsByClassName("Half")[0].children[0].style.cssText = whiteContentp
+        document.getElementsByClassName("Half")[0].children[1].style.cssText = whiteContentp
+        document.getElementsByClassName("Half")[0].children[2].style.cssText = whiteContentp
 
-          document.getElementsByClassName("Half")[0].children[0].style.cssText = blackP
-          document.getElementsByClassName("Half")[0].children[1].style.cssText = blackP
-          document.getElementsByClassName("Half")[0].children[2].style.cssText = blackP
-          document.getElementById('footerSvg').style.fill="#F0F1FF";
-          footerBackground.style.cssText=whitefooterBackground;
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src="assets/githubblack.png";
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src="assets/instagramblack.png";
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src="assets/linkedinblack.png";
-          document.getElementsByClassName("bttomleftContainer")[0].children[0].children[3].children[0].children[0].src="assets/twitterblack.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src = "assets/githubwhite.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src = "assets/instagramwhite.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src = "assets/linkedinwhite.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[3].children[0].children[0].src = "assets/twitterwhite.png";
 
-          //mobile footer images
-          document.getElementsByClassName("footercon")[0].children[0].children[0].src="assets/githubblack.png";
-          document.getElementsByClassName("footercon")[1].children[0].children[0].src="assets/instagramblack.png";
-          document.getElementsByClassName("footercon")[2].children[0].children[0].src="assets/linkedinblack.png";
-          document.getElementsByClassName("footercon")[3].children[0].children[0].src="assets/twitterblack.png";
-          document.getElementsByClassName("footerunderground")[0].children[0].children[5].style.cssText=blackP;
-        }
+        //mobile footer images
+        document.getElementsByClassName("footercon")[0].children[0].children[0].src = "assets/githubwhite.png";
+        document.getElementsByClassName("footercon")[1].children[0].children[0].src = "assets/instagramwhite.png";
+        document.getElementsByClassName("footercon")[2].children[0].children[0].src = "assets/linkedinwhite.png";
+        document.getElementsByClassName("footercon")[3].children[0].children[0].src = "assets/twitterwhite.png";
+
+        document.getElementsByClassName("footerunderground")[0].children[0].children[5].style.cssText = whiteP
+
+
+
       }
-    
-      async function loadDoc() {  
+      else { // enabling light mode
+        ligthMode = true;
+        body.style.cssText = whiteBcakgroundColor;
+        line0.style.cssText = blackBottomLineColor;
+        line2.style.cssText = blackBottomLineColor;
+        email.style.cssText = blackEmail;
+        h3.style.cssText = blackH3;
+        h1.style.cssText = blackH1;
+        firstP.style.cssText = blackP;
+        projectHeading.style.cssText = blackProjectsHeading;
+        projectHeading1.style.cssText = blackProjectsHeading;
+        for (p = 0; p < contentBox.length; p++) {
+          contentBox[p].style.cssText = whiteContentBox;
+          contentImage[p].setAttribute("src", blackFolderImage);
+          document.getElementsByClassName("contentbox")[p].children[1].style.cssText = blackContentHeading;
+          document.getElementsByClassName("contentbox")[p].children[2].style.cssText = blackContentp;
+          document.getElementsByClassName("contentbox")[p].children[3].style.cssText = blackContentH6;
+        }
 
-        var pageToVisit = "https://api.github.com/users/alansmathew/repos";
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
+        document.getElementsByClassName("Half")[0].children[0].style.cssText = blackP
+        document.getElementsByClassName("Half")[0].children[1].style.cssText = blackP
+        document.getElementsByClassName("Half")[0].children[2].style.cssText = blackP
+        document.getElementById('footerSvg').style.fill = "#F0F1FF";
+        footerBackground.style.cssText = whitefooterBackground;
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[0].children[0].children[0].src = "assets/githubblack.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[1].children[0].children[0].src = "assets/instagramblack.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[2].children[0].children[0].src = "assets/linkedinblack.png";
+        document.getElementsByClassName("bttomleftContainer")[0].children[0].children[3].children[0].children[0].src = "assets/twitterblack.png";
 
-            data=this.responseText;
-            jsdata=JSON.parse(data);
-            htmlToAppend="";
+        //mobile footer images
+        document.getElementsByClassName("footercon")[0].children[0].children[0].src = "assets/githubblack.png";
+        document.getElementsByClassName("footercon")[1].children[0].children[0].src = "assets/instagramblack.png";
+        document.getElementsByClassName("footercon")[2].children[0].children[0].src = "assets/linkedinblack.png";
+        document.getElementsByClassName("footercon")[3].children[0].children[0].src = "assets/twitterblack.png";
+        document.getElementsByClassName("footerunderground")[0].children[0].children[5].style.cssText = blackP;
+      }
+    }
 
-            length=jsdata.length;
-            for(i=0;i<length;i++){
+    async function loadDoc() {
 
-              desc="Seems like, god only knows now 😬";
-              if(jsdata[i].description != null){
-                desc=jsdata[i].description;
-              }
+      var pageToVisit = "https://api.github.com/users/alansmathew/repos";
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
 
-              lang="ReadME";
-              if(jsdata[i].language != null){
-                lang=jsdata[i].language;
-              }
+          data = this.responseText;
+          jsdata = JSON.parse(data);
+          htmlToAppend = "";
 
-              nameOfRepo=jsdata[i].name;
-              htmlUrl=jsdata[i].html_url;
+          length = jsdata.length;
+          for (i = 0; i < length; i++) {
 
-              htmlToAppend+='<a href="'+htmlUrl+'" target="_blank"> <div class="contentbox"> <img class="contentImage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAYAAAAdHLWhAAAABmJLR0QA/wD/AP+gvaeTAAADZklEQVR4nO3dQWtUVxjG8f+rKZquGhEFwYUpFb9ALUhdmI0i1GhcSDftQr+BXVQQdGEFK278CkK7cSMIIpW2NC50I6WIILhJ2xQsolJQIkYfF2NhOHNNRrx37hvv89vNyUnOyf3ryR0NM2BmZmZmZtYtsdQHJY0DB4DPgfU1rvsEuAFciIinNX7d7pC0W9LfatZdSdva/l5XHElfSFpsOM7/5iVtavt7zmrgiJO0DrgHTIxwH7PAVEQsjnDNFWGsYuwwg3F+An4Dnte07kHg077HO4GjwJmavv77S9LV4gj6sYE1PpI0V6zzVNLWutd670j6o7hwXza0zpSkF8VaNyRV/a3urFUVY+UFetbEwhHxM3C+GP4M+LaJ9Vaqtv+0HgemgS19YyckLQBz7WxpZB4DNyPiv6UmtRooIp5IOkzvJmT16+Ex4Gx7uxqpZ5IuAMci4kHVhKojbqQi4hfgZNv7aMka4AhwU9LmqgmtB3rtO+Bc25to0SRwUdJAj7Z/BgEQEQK+kXSF3vOwSZLsrSFjwFZgvG9sOzADXFzyMyXdKW59Z5rbZ3dJ2ijpdnGtfyjnZTniOici7jP4NGPgiboDtau8c/uwnOBAyTlQcg6U3DC3skclfQ+sa3ozHfMQuL/cpGEC7Xj3vViFCeDj5Sb5iEvOgZIb5ohboPffAtcB/85APcbo/SrbKWDtW31mxT/1nGpihwaSThfX+k45Z5gj7vcG9mY9t5abMEyglzVsxKote219k5CcAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJVcVqHx1+TWj2EhHla86P/DK/lWB/ikeT9e2HSvtLx7PlxOq3rvhGrC77/EhSeuBX4Hn9e2t0z4AdgFTxfi1cmKUA5ImgHv4DZ1G7QHwSUQ87h8cOOIi4hHwNX6nk1FaBL4q48Ab7uIi4jKwF/ir4Y0Z/AnsiYgrVR8cOOL6SRoH9gE7gQ31763T/gVmgUsRsdD2ZszMzMzMzLJ4BR1/81tLFuuIAAAAAElFTkSuQmCC" /> <h2><strong>'+nameOfRepo+'</strong></h2><p>'+desc+'</p><h6>'+lang+'</h6></div></a>';
-
+            desc = "Seems like, god only knows now 😬";
+            if (jsdata[i].description != null) {
+              desc = jsdata[i].description;
             }
-            document.getElementsByClassName("horizontalscroller")[0].innerHTML=htmlToAppend;
+
+            lang = "ReadME";
+            if (jsdata[i].language != null) {
+              lang = jsdata[i].language;
+            }
+
+            nameOfRepo = jsdata[i].name;
+            htmlUrl = jsdata[i].html_url;
+
+            htmlToAppend += '<a href="' + htmlUrl + '" target="_blank"> <div class="contentbox"> <img class="contentImage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAYAAAAdHLWhAAAABmJLR0QA/wD/AP+gvaeTAAADZklEQVR4nO3dQWtUVxjG8f+rKZquGhEFwYUpFb9ALUhdmI0i1GhcSDftQr+BXVQQdGEFK278CkK7cSMIIpW2NC50I6WIILhJ2xQsolJQIkYfF2NhOHNNRrx37hvv89vNyUnOyf3ryR0NM2BmZmZmZtYtsdQHJY0DB4DPgfU1rvsEuAFciIinNX7d7pC0W9LfatZdSdva/l5XHElfSFpsOM7/5iVtavt7zmrgiJO0DrgHTIxwH7PAVEQsjnDNFWGsYuwwg3F+An4Dnte07kHg077HO4GjwJmavv77S9LV4gj6sYE1PpI0V6zzVNLWutd670j6o7hwXza0zpSkF8VaNyRV/a3urFUVY+UFetbEwhHxM3C+GP4M+LaJ9Vaqtv+0HgemgS19YyckLQBz7WxpZB4DNyPiv6UmtRooIp5IOkzvJmT16+Ex4Gx7uxqpZ5IuAMci4kHVhKojbqQi4hfgZNv7aMka4AhwU9LmqgmtB3rtO+Bc25to0SRwUdJAj7Z/BgEQEQK+kXSF3vOwSZLsrSFjwFZgvG9sOzADXFzyMyXdKW59Z5rbZ3dJ2ijpdnGtfyjnZTniOici7jP4NGPgiboDtau8c/uwnOBAyTlQcg6U3DC3skclfQ+sa3ozHfMQuL/cpGEC7Xj3vViFCeDj5Sb5iEvOgZIb5ohboPffAtcB/85APcbo/SrbKWDtW31mxT/1nGpihwaSThfX+k45Z5gj7vcG9mY9t5abMEyglzVsxKote219k5CcAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJedAyTlQcg6UnAMl50DJOVByDpScAyXnQMk5UHIOlJwDJVcVqHx1+TWj2EhHla86P/DK/lWB/ikeT9e2HSvtLx7PlxOq3rvhGrC77/EhSeuBX4Hn9e2t0z4AdgFTxfi1cmKUA5ImgHv4DZ1G7QHwSUQ87h8cOOIi4hHwNX6nk1FaBL4q48Ab7uIi4jKwF/ir4Y0Z/AnsiYgrVR8cOOL6SRoH9gE7gQ31763T/gVmgUsRsdD2ZszMzMzMzLJ4BR1/81tLFuuIAAAAAElFTkSuQmCC" /> <h2><strong>' + nameOfRepo + '</strong></h2><p>' + desc + '</p><h6>' + lang + '</h6></div></a>';
+
           }
-        };
-        xhttp.open("GET", pageToVisit, true);
-        xhttp.send();
+          document.getElementsByClassName("horizontalscroller")[0].innerHTML = htmlToAppend;
+        }
+      };
+      xhttp.open("GET", pageToVisit, true);
+      xhttp.send();
 
-        const hours = new Date().getHours()
-        var isDayTime = hours > 7 && hours < 18
-        console.log(isDayTime)
 
-        if(document.readyState === 'ready' || document.readyState === 'complete') {
-          if(isDayTime){
-            await sleep(6000);
-            document.getElementById("switch").click();
-            toggle();
-          }
 
+      const visitorData = {
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        platform: navigator.platform,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      };
+
+      console.log("Visitor Info:", visitorData);
+      const endpoint = 'https://alansmathew.infinityfreeapp.com/addCount.php';
+      const xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+       if (xhr.status === 200) {
+            try {
+                const response = JSON.parse(xhr.responseText);
+                console.log("Total Visits:", response.totalVisits);
+
+                // You can show it on the page if you want:
+                document.getElementById("visits").textContent = response.totalVisits + " 👀" ;
+            } catch (e) {
+                console.error("Invalid JSON response", e);
+            }
         } else {
-          document.onreadystatechange = async function () {
-          if (document.readyState == "complete") {
-              if(isDayTime){
-                await sleep(6000);
-                document.getElementById("switch").click();
-                toggle();
-              }
+            console.error("Request failed with status", xhr.status);
+        }
+      };
+      xhr.open('POST', endpoint, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(JSON.stringify(visitorData));
 
+
+
+      const hours = new Date().getHours()
+      var isDayTime = hours > 7 && hours < 18
+      console.log(isDayTime)
+
+      if (document.readyState === 'ready' || document.readyState === 'complete') {
+        if (isDayTime) {
+          await sleep(6000);
+          document.getElementById("switch").click();
+          toggle();
+        }
+
+      } else {
+        document.onreadystatechange = async function () {
+          if (document.readyState == "complete") {
+            if (isDayTime) {
+              await sleep(6000);
+              document.getElementById("switch").click();
+              toggle();
             }
+
           }
         }
+      }
 
-        }
-    
-    </script>
-  </head>
-  
-  <body onload="loadDoc()">
+    }
+
+  </script>
+</head>
+
+<body onload="loadDoc()">
   <!-- <body> -->
 
   <!-- animation --------------------------------------- -->
-    <div class="animationccontainer" id="ani">
-      <section class="container">
+  <div class="animationccontainer" id="ani">
+    <section class="container">
+      <div>
         <div>
-          <div>
-            <span class="one loadsix"></span>
-            <span class="two loadthree"></span>
-          </div>
+          <span class="one loadsix"></span>
+          <span class="two loadthree"></span>
         </div>
-        <p class="animat">ASM</p>
-        <div>
-          <div>
-            <span class="one loadone"></span>
-            <span class="two loadfour"></span>
-          </div>
-        </div>
-        <div>
-          <div>
-            <span class="one loadfive"></span>
-            <span class="two loadftwo"></span>
-          </div>
-        </div>
-      </section>
-      <div class="coffee">
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
+      <p class="animat">ASM</p>
+      <div>
+        <div>
+          <span class="one loadone"></span>
+          <span class="two loadfour"></span>
+        </div>
+      </div>
+      <div>
+        <div>
+          <span class="one loadfive"></span>
+          <span class="two loadftwo"></span>
+        </div>
+      </div>
+    </section>
+    <div class="coffee">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+  </div>
   <!-- animation ends here  -->
 
-    <!-- body stats here  -->
-    <div class="bodycontainer" id="bdycont">
+  <!-- body stats here  -->
+  <div class="bodycontainer" id="bdycont">
 
-      <div class="togglerClass">
-        <p>🌚</p>
-        <div class="toggler">
-          <input type="checkbox" id="switch" /> <label onclick="toggle()" for="switch">Toggle</label>  
-        </div>
-        <p>🌝</p>
+    <div class="togglerClass">
+      <p>🌚</p>
+      <div class="toggler">
+        <input type="checkbox" id="switch" /> <label onclick="toggle()" for="switch">Toggle</label>
       </div>
-      
-      <div class="blockcontainer">
-        <div class="centerbox">
+      <p>🌝</p>
+    </div>
 
-          <div class="content mobileimage">
-            <svg width="90%" height="100%" viewBox="0 0 367 367" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__avatar-me">
-                <g clip-path="url(#clip0)">
-                <path id="blob1" d="M285.813 65.2769C314.77 88.9694 334.007 123.394 333.805 156.199C333.4 189.004 313.555 220.189 295.938 245.097C278.118 270.004 262.525 288.634 243.49 307.264C224.455 325.894 201.977 344.322 175.45 349.992C148.72 355.864 117.94 348.574 91.8175 332.172C65.8975 315.972 44.4325 290.659 42.205 263.727C39.9775 236.794 56.785 208.444 64.48 174.627C72.175 140.809 70.7575 101.727 88.375 74.1869C105.992 46.8494 142.847 31.0544 180.512 29.6369C218.177 28.2194 256.855 41.3819 285.813 65.2769Z" fill="#F0F1FF"></path>
-                <g opacity="0.5" clip-path="url(#clip1)" id="blob2">
-                <path d="M236.462 22.6306C271.883 34.7998 301.912 60.4235 313.13 91.2868C324.158 122.221 316.375 158.394 308.5 187.9C300.434 217.477 292.277 240.387 280.888 264.494C269.499 288.601 254.809 313.715 231.88 328.262C208.831 343.07 177.404 346.931 147.18 340.618C117.216 334.426 88.2651 318.13 76.8083 293.624C65.3515 269.118 71.2693 236.662 66.7322 202.243C62.195 167.824 47.2734 131.631 54.2332 99.6538C61.2634 67.8665 90.3651 40.2238 125.227 25.7951C160.089 11.3664 200.971 10.2713 236.462 22.6306Z" fill="#F0F1FF"></path>
-                </g>
-                </g>
-                <defs>
-                <clipPath id="clip0">
+    <div class="blockcontainer">
+      <div class="centerbox">
+
+        <div class="content mobileimage">
+          <svg width="90%" height="100%" viewBox="0 0 367 367" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="hero__avatar-me">
+            <g clip-path="url(#clip0)">
+              <path id="blob1"
+                d="M285.813 65.2769C314.77 88.9694 334.007 123.394 333.805 156.199C333.4 189.004 313.555 220.189 295.938 245.097C278.118 270.004 262.525 288.634 243.49 307.264C224.455 325.894 201.977 344.322 175.45 349.992C148.72 355.864 117.94 348.574 91.8175 332.172C65.8975 315.972 44.4325 290.659 42.205 263.727C39.9775 236.794 56.785 208.444 64.48 174.627C72.175 140.809 70.7575 101.727 88.375 74.1869C105.992 46.8494 142.847 31.0544 180.512 29.6369C218.177 28.2194 256.855 41.3819 285.813 65.2769Z"
+                fill="#F0F1FF"></path>
+              <g opacity="0.5" clip-path="url(#clip1)" id="blob2">
+                <path
+                  d="M236.462 22.6306C271.883 34.7998 301.912 60.4235 313.13 91.2868C324.158 122.221 316.375 158.394 308.5 187.9C300.434 217.477 292.277 240.387 280.888 264.494C269.499 288.601 254.809 313.715 231.88 328.262C208.831 343.07 177.404 346.931 147.18 340.618C117.216 334.426 88.2651 318.13 76.8083 293.624C65.3515 269.118 71.2693 236.662 66.7322 202.243C62.195 167.824 47.2734 131.631 54.2332 99.6538C61.2634 67.8665 90.3651 40.2238 125.227 25.7951C160.089 11.3664 200.971 10.2713 236.462 22.6306Z"
+                  fill="#F0F1FF"></path>
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0">
                 <rect width="367" height="367" fill="white"></rect>
-                </clipPath>
-                <clipPath id="clip1">
-                <rect width="405.41" height="405.41" fill="white" transform="translate(-72 79.8405) rotate(-20.3285)"></rect>
-                </clipPath>
-                <clipPath id="clip2">
+              </clipPath>
+              <clipPath id="clip1">
+                <rect width="405.41" height="405.41" fill="white" transform="translate(-72 79.8405) rotate(-20.3285)">
+                </rect>
+              </clipPath>
+              <clipPath id="clip2">
                 <rect width="177" height="263" fill="white" transform="translate(95 52)"></rect>
-                </clipPath>
-                </defs>
-            </svg>
-            <img src="assets/avthar.png" alt=""> 
-          </div>
+              </clipPath>
+            </defs>
+          </svg>
+          <img src="assets/avthar.png" alt="">
+        </div>
 
-          <div class="content size1" >
-            <h3>Hey, i'm Alan Sebastian Mathew &nbsp; <div class="shake">👋 </div></h3>
-            <h1>
-              I'm a software developer, creative thinker & self-motivated person with experience in prototyping, designing and developing scalable systems across
-              <div style="color: rgb(114, 94, 245); display: inline;">entertainment, finance, fashion, health-care, ML/AI, AR and RealTime Applications.</p>
-            </h1> 
-            <p id="firstP">
-                4+ years experienced software developer extensive expertise in architecting and implementing software solutions has not only contributed to the growth and success of these industries but has also allowed me to continuously adapt to the unique challenges and requirements within each sector. 
-                <br><br>
-                <i>Expert in Swift, SwiftUI, UIKit, Python, PHP, C#, JS, HTML, CSS, SQL, Dart, Flutter, Bootstrap.</i>
+        <div class="content size1">
+          <h3>Hey, i'm Alan Sebastian Mathew &nbsp; <div class="shake">👋 </div>
+          </h3>
+          <h1>
+            I'm a software developer, creative thinker & self-motivated person with experience in prototyping, designing
+            and developing scalable systems across
+            <div style="color: rgb(114, 94, 245); display: inline;">entertainment, finance, fashion, health-care, ML/AI,
+              AR and RealTime Applications.</p>
+          </h1>
+          <p id="firstP">
+            4+ years experienced software developer extensive expertise in architecting and implementing software
+            solutions has not only contributed to the growth and success of these industries but has also allowed me to
+            continuously adapt to the unique challenges and requirements within each sector.
+            <br><br>
+            <i>Expert in Swift, SwiftUI, UIKit, Python, PHP, C#, JS, HTML, CSS, SQL, Dart, Flutter, Bootstrap.</i>
 
-            </p>
-          </div>
+          </p>
+        </div>
 
-          <div class="content size2">
-            <svg width="110%" height="100%" viewBox="0 0 367 367" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__avatar-me">
-                <g clip-path="url(#clip0)">
-                <path id="blob1" d="M285.813 65.2769C314.77 88.9694 334.007 123.394 333.805 156.199C333.4 189.004 313.555 220.189 295.938 245.097C278.118 270.004 262.525 288.634 243.49 307.264C224.455 325.894 201.977 344.322 175.45 349.992C148.72 355.864 117.94 348.574 91.8175 332.172C65.8975 315.972 44.4325 290.659 42.205 263.727C39.9775 236.794 56.785 208.444 64.48 174.627C72.175 140.809 70.7575 101.727 88.375 74.1869C105.992 46.8494 142.847 31.0544 180.512 29.6369C218.177 28.2194 256.855 41.3819 285.813 65.2769Z" fill="#F0F1FF"></path>
-                <g opacity="0.5" clip-path="url(#clip1)" id="blob2">
-                <path d="M236.462 22.6306C271.883 34.7998 301.912 60.4235 313.13 91.2868C324.158 122.221 316.375 158.394 308.5 187.9C300.434 217.477 292.277 240.387 280.888 264.494C269.499 288.601 254.809 313.715 231.88 328.262C208.831 343.07 177.404 346.931 147.18 340.618C117.216 334.426 88.2651 318.13 76.8083 293.624C65.3515 269.118 71.2693 236.662 66.7322 202.243C62.195 167.824 47.2734 131.631 54.2332 99.6538C61.2634 67.8665 90.3651 40.2238 125.227 25.7951C160.089 11.3664 200.971 10.2713 236.462 22.6306Z" fill="#F0F1FF"></path>
-                </g>
-                </g>
-                <defs>
-                <clipPath id="clip0">
+        <div class="content size2">
+          <svg width="110%" height="100%" viewBox="0 0 367 367" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="hero__avatar-me">
+            <g clip-path="url(#clip0)">
+              <path id="blob1"
+                d="M285.813 65.2769C314.77 88.9694 334.007 123.394 333.805 156.199C333.4 189.004 313.555 220.189 295.938 245.097C278.118 270.004 262.525 288.634 243.49 307.264C224.455 325.894 201.977 344.322 175.45 349.992C148.72 355.864 117.94 348.574 91.8175 332.172C65.8975 315.972 44.4325 290.659 42.205 263.727C39.9775 236.794 56.785 208.444 64.48 174.627C72.175 140.809 70.7575 101.727 88.375 74.1869C105.992 46.8494 142.847 31.0544 180.512 29.6369C218.177 28.2194 256.855 41.3819 285.813 65.2769Z"
+                fill="#F0F1FF"></path>
+              <g opacity="0.5" clip-path="url(#clip1)" id="blob2">
+                <path
+                  d="M236.462 22.6306C271.883 34.7998 301.912 60.4235 313.13 91.2868C324.158 122.221 316.375 158.394 308.5 187.9C300.434 217.477 292.277 240.387 280.888 264.494C269.499 288.601 254.809 313.715 231.88 328.262C208.831 343.07 177.404 346.931 147.18 340.618C117.216 334.426 88.2651 318.13 76.8083 293.624C65.3515 269.118 71.2693 236.662 66.7322 202.243C62.195 167.824 47.2734 131.631 54.2332 99.6538C61.2634 67.8665 90.3651 40.2238 125.227 25.7951C160.089 11.3664 200.971 10.2713 236.462 22.6306Z"
+                  fill="#F0F1FF"></path>
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0">
                 <rect width="367" height="367" fill="white"></rect>
-                </clipPath>
-                <clipPath id="clip1">
-                <rect width="405.41" height="405.41" fill="white" transform="translate(-72 79.8405) rotate(-20.3285)"></rect>
-                </clipPath>
-                <clipPath id="clip2">
+              </clipPath>
+              <clipPath id="clip1">
+                <rect width="405.41" height="405.41" fill="white" transform="translate(-72 79.8405) rotate(-20.3285)">
+                </rect>
+              </clipPath>
+              <clipPath id="clip2">
                 <rect width="177" height="263" fill="white" transform="translate(95 52)"></rect>
-                </clipPath>
-                </defs>
-            </svg>
-            <img src="assets/avthar.png" alt=""> 
-          </div>
-
+              </clipPath>
+            </defs>
+          </svg>
+          <img src="assets/avthar.png" alt="">
         </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- this is placed outiside body container because to get 100% width on horizontal scroll  -->
+  <!-- this is placed outiside body container because to get 100% width on horizontal scroll  -->
 
-    <div class="projectcontainer" id="projectContainer">
-     
-      <div class="recentProjects">
-        <center><div class="headings">Recent Projects <div></div></div></center>
-        <div class="projectTimeline">
-          <div class="Half">
-            <h3> FoodARoma</h3>
-            <h4>
-              FoodARoma redefines customer interaction, enabling dynamic food customization through AR. Utilizing mobile cameras and computational prowess, we offer an interactive representation of pizza components, empowering informed choices.
-              Our technology not only enhances consumer interaction but also provides essential business tools like order management, menu control, and sales analytics, fostering growth for small enterprises in the competitive industry.
-            </h4>
-           <a href="https://github.com/alansmathew/FoodARoma.git">Get more information ➡</a>
-          </div>
-          <div class="Half">
-            <center>
-              <img class="ImageOne" src="assets/projectImages/p1imageOne.png" alt="" srcset="">
-              <img style="z-index: 10;" src="assets/demoVideo.gif" alt="Loading Demo" srcset="">
-              <img class="ImageTwo" src="assets/projectImages/p1ImageTwo.png" alt="">
-            </center>
-          </div>
-          
-        </div>
-      </div>
-    <br>
-    <br>
-      <center><div class="headings">Projects <div></div></div></center>
-      <div class="paddingContainer">
-        <div class="horizontalscroller">
-        </div>
-      </div>
-    </div>
+  <div class="projectcontainer" id="projectContainer">
 
-    <!-- body ends here  -->
-
-    <div class="bttomleftContainer" id="btmleft">
+    <div class="recentProjects">
       <center>
-        <div class="con">
-          <a href="https://github.com/alansmathew" target="_blank"
-            ><img
-              src="assets/githubwhite.png"
-          /></a>
+        <div class="headings">Recent Projects <div></div>
         </div>
-        <div class="con">
-          <a href="https://www.instagram.com/alan_s_mathew" target="_blank"
-            ><img
-              src="assets/instagramwhite.png"
-          /></a>
-        </div>
-        <div class="con">
-          <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"
-            ><img src="assets/linkedinwhite.png"
-          /></a>
-        </div>
-        <div class="con">
-          <a href="https://twitter.com/AlanSMathew008" target="_blank"
-            ><img src="assets/twitterwhite.png"
-          /></a>
-        </div>
-        <div class="line" id="firstLine"></div>
       </center>
-    </div>
-
-    <div class="bttomrightContainer" id="btmright">
-      <center>
-        <a href="mailto:alansmathew@icloud.com" id="emailid">alansmathew@icloud.com</a>
-        <div class="line" id="secondLine"></div>
-      </center>
-    </div>
-
-    <div class="footer" id="ftr">
-      <svg width="100%" height="180" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" >
-        <path d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" style="fill: #000000;"; id="footerSvg"></path>
-      </svg>
-      <div class="footerunderground">
+      <div class="projectTimeline">
+        <div class="Half">
+          <h3> FoodARoma</h3>
+          <h4>
+            FoodARoma redefines customer interaction, enabling dynamic food customization through AR. Utilizing mobile
+            cameras and computational prowess, we offer an interactive representation of pizza components, empowering
+            informed choices.
+            Our technology not only enhances consumer interaction but also provides essential business tools like order
+            management, menu control, and sales analytics, fostering growth for small enterprises in the competitive
+            industry.
+          </h4>
+          <a href="https://github.com/alansmathew/FoodARoma.git">Get more information ➡</a>
+        </div>
+        <div class="Half">
           <center>
-            <div class="footercon">
-              <a href="https://github.com/alansmathew" target="_blank"
-                ><img
-                  src="assets/githubwhite.png"
-              /></a>
-            </div>
-            <div class="footercon">
-              <a href="https://www.instagram.com/alan_s_mathew" target="_blank"
-                ><img
-                  src="assets/instagramwhite.png"
-              /></a>
-            </div>
-            <div class="footercon">
-              <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"
-                ><img src="assets/linkedinwhite.png"
-              /></a>
-            </div>
-            <div class="footercon">
-              <a href="https://twitter.com/AlanSMathew008" target="_blank"
-                ><img src="assets/twitterwhite.png"
-              /></a>
-            </div> <br>
-            <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a><br>
-            <div class="design">Designed & build by Alan Sebastian Mathew <br>Feel free to download this and modifiy as per you likings</div>
-            <!-- <div id="visits" style="margin-top: 2px;">👀</div> // api went down made page stuck in loading animation--> 
+            <img class="ImageOne" src="assets/projectImages/p1imageOne.png" alt="" srcset="">
+            <img style="z-index: 10;" src="assets/demoVideo.gif" alt="Loading Demo" srcset="">
+            <img class="ImageTwo" src="assets/projectImages/p1ImageTwo.png" alt="">
           </center>
+        </div>
+
       </div>
     </div>
+    <br>
+    <br>
+    <center>
+      <div class="headings">Projects <div></div>
+      </div>
+    </center>
+    <div class="paddingContainer">
+      <div class="horizontalscroller">
+      </div>
+    </div>
+  </div>
 
-  </body>
+  <!-- body ends here  -->
+
+  <div class="bttomleftContainer" id="btmleft">
+    <center>
+      <div class="con">
+        <a href="https://github.com/alansmathew" target="_blank"><img src="assets/githubwhite.png" /></a>
+      </div>
+      <div class="con">
+        <a href="https://www.instagram.com/alan_s_mathew" target="_blank"><img src="assets/instagramwhite.png" /></a>
+      </div>
+      <div class="con">
+        <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"><img src="assets/linkedinwhite.png" /></a>
+      </div>
+      <div class="con">
+        <a href="https://twitter.com/AlanSMathew008" target="_blank"><img src="assets/twitterwhite.png" /></a>
+      </div>
+      <div class="line" id="firstLine"></div>
+    </center>
+  </div>
+
+  <div class="bttomrightContainer" id="btmright">
+    <center>
+      <a href="mailto:alansmathew@icloud.com" id="emailid">alansmathew@icloud.com</a>
+      <div class="line" id="secondLine"></div>
+    </center>
+  </div>
+
+  <div class="footer" id="ftr">
+    <svg width="100%" height="180" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid slice">
+      <path
+        d="M0 0L48 8.875C96 17.9167 192 35.4167 288 53.3333C384 71.25 480 88.75 576 82.2083C672 75.4167 768 44.5833 864 26.6667C960 8.75 1056 4.58333 1152 11.125C1248 17.9167 1344 35.4167 1392 44.4583L1440 53.3333V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z"
+        style="fill: #000000;" ; id="footerSvg"></path>
+    </svg>
+    <div class="footerunderground">
+      <center>
+        <div class="footercon">
+          <a href="https://github.com/alansmathew" target="_blank"><img src="assets/githubwhite.png" /></a>
+        </div>
+        <div class="footercon">
+          <a href="https://www.instagram.com/alan_s_mathew" target="_blank"><img src="assets/instagramwhite.png" /></a>
+        </div>
+        <div class="footercon">
+          <a href="https://www.linkedin.com/in/alan-s-mathew/" target="_blank"><img
+              src="assets/linkedinwhite.png" /></a>
+        </div>
+        <div class="footercon">
+          <a href="https://twitter.com/AlanSMathew008" target="_blank"><img src="assets/twitterwhite.png" /></a>
+        </div> <br>
+        <a href="mailto:alansmathew@icloud.com">alansmathew@icloud.com</a><br>
+        <div class="design">Designed & build by Alan Sebastian Mathew <br>Feel free to download this and modifiy as per
+          you likings</div>
+        <div id="visits" style="margin-top: 2px;">Loading... 👀</div>
+        <!-- // api went down made page stuck in loading animation  -->
+      </center>
+    </div>
+  </div>
+
+</body>
+
 </html>
