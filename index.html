@@ -1123,14 +1123,15 @@
 
 
       const visitorData = {
-        userAgent: navigator.userAgent,
-        language: navigator.language,
-        platform: navigator.platform,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        "pageName" : "alan_portfolio"
+        // userAgent: navigator.userAgent,
+        // language: navigator.language,
+        // platform: navigator.platform,
+        // timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       };
 
       console.log("Visitor Info:", visitorData);
-      const endpoint = 'https://alansmathew.infinityfreeapp.com/addCount.php';
+      const endpoint = 'https://api.mathaihome.com/getVisit';
       const xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function () {
        if (xhr.status === 200) {
