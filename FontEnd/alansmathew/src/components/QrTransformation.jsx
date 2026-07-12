@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { animate } from 'animejs'
 import qrcodeUrl from '../assets/photo/qrcode.svg'
 import prophotoUrl from '../assets/photo/prophoto.svg'
 
@@ -110,16 +111,11 @@ function buildParticles(qrCells, photoCells) {
 }
 
 function lerp(a, b, t) { return a + (b - a) * t }
-function easeInOutCubic(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2 }
+function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4) }
 function easeInOutQuart(t) { return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2 }
-function overshoot(t) {
-  const c = 1.7
-  if (t < 0.5) {
-    const inner = 2 * t
-    return 0.5 * (inner * inner * ((c + 1) * inner - c))
-  }
-  const inner = 2 * t - 2
-  return 0.5 * (inner * inner * ((c + 1) * inner + c) + 2)
+function easeOutBack(t) {
+  const c = 1.2
+  return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2)
 }
 function delayedProgress(progress, delay) {
   const window = 1 - delay
@@ -144,10 +140,11 @@ function drawFrame(ctx, particles, progress, phase) {
       x = p.sx; y = p.sy
       r = g = b = 30; alpha = 1
     } else if (phase === 'toFloat') {
-      x = lerp(p.sx, p.floatX, easeInOutQuart(lt))
-      y = lerp(p.sy, p.floatY, easeInOutQuart(lt))
+      const et = easeOutQuart(lt)
+      x = lerp(p.sx, p.floatX, et)
+      y = lerp(p.sy, p.floatY, et)
       r = g = b = 30
-      alpha = p.hasQr ? 1 : lt
+      alpha = p.hasQr ? 1 : et
     } else if (phase === 'float') {
       const time = Date.now() / 1000
       const offX = Math.sin(time * 1.2 + i * 0.7) * 8
@@ -157,9 +154,9 @@ function drawFrame(ctx, particles, progress, phase) {
       r = g = b = 30; alpha = 1
     } else if (phase === 'toPortrait') {
       const pt = delayedProgress(progress, p.setDelay)
-      const et = easeInOutCubic(pt)
-      x = lerp(p.floatX, p.tx, overshoot(et))
-      y = lerp(p.floatY, p.ty, overshoot(et))
+      const et = easeOutQuart(pt)
+      x = lerp(p.floatX, p.tx, easeOutBack(et))
+      y = lerp(p.floatY, p.ty, easeOutBack(et))
       r = Math.round(lerp(30, p.colorR, et))
       g = Math.round(lerp(30, p.colorG, et))
       b = Math.round(lerp(30, p.colorB, et))
@@ -170,9 +167,9 @@ function drawFrame(ctx, particles, progress, phase) {
       r = p.colorR; g = p.colorG; b = p.colorB; alpha = 1
     } else if (phase === 'toQR') {
       const pt = delayedProgress(progress, p.setDelay)
-      const et = easeInOutCubic(pt)
-      x = lerp(p.tx, p.sx, overshoot(et))
-      y = lerp(p.ty, p.sy, overshoot(et))
+      const et = easeOutQuart(pt)
+      x = lerp(p.tx, p.sx, easeOutBack(et))
+      y = lerp(p.ty, p.sy, easeOutBack(et))
       r = Math.round(lerp(p.colorR, 30, et))
       g = Math.round(lerp(p.colorG, 30, et))
       b = Math.round(lerp(p.colorB, 30, et))
@@ -192,7 +189,8 @@ function drawFrame(ctx, particles, progress, phase) {
 export default function QrTransformation() {
   const canvasRef = useRef(null)
   const particlesRef = useRef([])
-  const rafRef = useRef(null)
+  const animRef = useRef(null)
+  const floatRafRef = useRef(null)
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
@@ -225,46 +223,52 @@ export default function QrTransformation() {
   }, [])
 
   const animatePhase = useCallback((phase, duration) => {
+    if (animRef.current) {
+      animRef.current.pause()
+      animRef.current = null
+    }
+    const canvas = canvasRef.current
+    const ctx = canvas.getContext('2d')
+    const particles = particlesRef.current
+    const state = { t: 0 }
     return new Promise((resolve) => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current)
-      const ctx = canvasRef.current.getContext('2d')
-      const particles = particlesRef.current
-      let start = null
-      function frame(ts) {
-        if (!start) start = ts
-        const rawT = Math.min((ts - start) / duration, 1)
-        ctx.save()
-        ctx.setTransform(1, 0, 0, 1, 0, 0)
-        ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height)
-        ctx.restore()
-        drawFrame(ctx, particles, rawT, phase)
-        if (rawT < 1) {
-          rafRef.current = requestAnimationFrame(frame)
-        } else {
-          resolve()
-        }
-      }
-      rafRef.current = requestAnimationFrame(frame)
+      animRef.current = animate(state, {
+        t: [0, 1],
+        duration,
+        easing: 'spring(1, 80, 12, 0)',
+        onUpdate: () => {
+          ctx.save()
+          ctx.setTransform(1, 0, 0, 1, 0, 0)
+          ctx.clearRect(0, 0, canvas.width, canvas.height)
+          ctx.restore()
+          drawFrame(ctx, particles, state.t, phase)
+        },
+        onComplete: resolve,
+      })
     })
   }, [])
 
-  const startFloatLoop = useCallback(() => {
-    if (rafRef.current) cancelAnimationFrame(rafRef.current)
-    const ctx = canvasRef.current.getContext('2d')
+  const startFloating = useCallback(() => {
+    if (animRef.current) {
+      animRef.current.pause()
+      animRef.current = null
+    }
+    const canvas = canvasRef.current
+    const ctx = canvas.getContext('2d')
     const particles = particlesRef.current
     function loop() {
       ctx.save()
       ctx.setTransform(1, 0, 0, 1, 0, 0)
-      ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height)
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
       ctx.restore()
       drawFrame(ctx, particles, 1, 'float')
-      rafRef.current = requestAnimationFrame(loop)
+      floatRafRef.current = requestAnimationFrame(loop)
     }
-    rafRef.current = requestAnimationFrame(loop)
+    floatRafRef.current = requestAnimationFrame(loop)
   }, [])
 
-  const stopLoop = useCallback(() => {
-    if (rafRef.current) cancelAnimationFrame(rafRef.current)
+  const stopFloating = useCallback(() => {
+    if (floatRafRef.current) cancelAnimationFrame(floatRafRef.current)
   }, [])
 
   useEffect(() => {
@@ -276,10 +280,10 @@ export default function QrTransformation() {
         if (cancelled) break
         await animatePhase('toFloat', 1200)
         if (cancelled) break
-        startFloatLoop()
+        startFloating()
         await new Promise(r => setTimeout(r, 1500))
         if (cancelled) break
-        stopLoop()
+        stopFloating()
         await animatePhase('toPortrait', 3000)
         if (cancelled) break
         await new Promise(r => setTimeout(r, 5000))
@@ -289,7 +293,7 @@ export default function QrTransformation() {
     }
     run()
     return () => { cancelled = true }
-  }, [ready, animatePhase, startFloatLoop, stopLoop])
+  }, [ready, animatePhase, startFloating, stopFloating])
 
   return (
     <div className="qr-transform">
