@@ -186,7 +186,7 @@ function drawFrame(ctx, particles, progress, phase) {
   ctx.globalAlpha = 1
 }
 
-export default function QrTransformation() {
+export default function QrTransformation({ size }) {
   const canvasRef = useRef(null)
   const particlesRef = useRef([])
   const animRef = useRef(null)
@@ -197,7 +197,7 @@ export default function QrTransformation() {
     let cancelled = false
     async function init() {
       const canvas = canvasRef.current
-      const displaySize = canvas.clientWidth || 600
+      const displaySize = size || canvas.clientWidth || 600
       const dpr = window.devicePixelRatio || 1
       canvas.width = displaySize * dpr
       canvas.height = displaySize * dpr
@@ -296,9 +296,9 @@ export default function QrTransformation() {
   }, [ready, animatePhase, startFloating, stopFloating])
 
   return (
-    <div className="qr-transform">
-      <div className="canvas-wrap">
-        <canvas ref={canvasRef} className="main-canvas" />
+    <div className="qr-transform" style={{ width: size, height: size, minWidth: size, minHeight: size, flexShrink: 0 }}>
+      <div className="canvas-wrap" style={{ width: size, height: size }}>
+        <canvas ref={canvasRef} className="main-canvas" style={{ width: '100%', height: '100%' }} />
         {!ready && <div className="overlay">Loading...</div>}
       </div>
     </div>
