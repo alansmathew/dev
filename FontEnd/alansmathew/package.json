@@ -14,9 +14,11 @@
     "animejs": "^4.5.0",
     "framer-motion": "^12.42.2",
     "lucide-react": "^1.24.0",
+    "postprocessing": "^6.39.4",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "tailwindcss": "^4.3.2"
+    "tailwindcss": "^4.3.2",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
@@ -25,8 +27,7 @@
     "oxlint": "^1.71.0",
     "vite": "^8.1.1"
   },
-
-    "imports": {
+  "imports": {
     "#components/*": "./src/components/*.tsx",
     "#lib/*": "./src/lib/*.ts",
     "#hooks/*": "./src/hooks/*.ts"

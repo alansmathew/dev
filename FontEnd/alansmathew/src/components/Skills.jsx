@@ -59,7 +59,7 @@ export default function Skills() {
           variants={fadeUp}
           className="font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-12"
         >
-          03 &mdash; Skills
+          &mdash; Skills
         </motion.p>
 
         {/* Languages */}

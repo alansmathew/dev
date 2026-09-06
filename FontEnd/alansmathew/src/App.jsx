@@ -26,12 +26,12 @@ export default function App() {
       <Experience />
       <Skills />
       <Projects />
-      <Stats />
-      <Contact />
+      {/* <Stats /> */}
+      {/* <Contact /> */}
 
-      <footer className="py-8 px-6 text-center border-t border-neutral-100">
+      <footer className="py-8 px-6 text-center border-t border-neutral-100 mb-10">
         <p className="text-[11px] font-mono text-neutral-400">
-          Alan Sebastian Mathew &copy; {new Date().getFullYear()} &mdash; Executing with Absolute Precision
+          Designed and developed by Alan Sebastian Mathew &copy; {new Date().getFullYear()} &mdash; Feel free to copy and use for your need.
         </p>
       </footer>
     </div>

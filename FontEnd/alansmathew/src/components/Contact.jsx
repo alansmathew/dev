@@ -29,7 +29,7 @@ export default function Contact() {
           variants={fadeUp}
           className="font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-12"
         >
-          06 &mdash; Contact
+          &mdash; Contact
         </motion.p>
 
         <motion.h2

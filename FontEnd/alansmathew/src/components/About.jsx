@@ -19,7 +19,7 @@ export default function About() {
           variants={fadeUp}
           className="font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-6"
         >
-          01 &mdash; About
+          &mdash; About
         </motion.p>
 
         <motion.p

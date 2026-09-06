@@ -27,7 +27,7 @@ export default function Stats() {
           variants={fadeUp}
           className="font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-12"
         >
-          05 &mdash; By the Numbers
+          &mdash; By the Numbers
         </motion.p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
